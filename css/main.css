@@ -1,0 +1,84 @@
+/*<button class="button button-primary" onclick="getElementById('demo').innerHTML=Date()">Advice me?</button>
+<A HREF="/code-samples/basicpopup/" onClick="return popup(this, 'notes')">Advice me!</A>*/
+
+body{
+    background-color: #f4fafd;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#container{
+    width: 100%;
+    text-align: center;
+}
+
+#advice_box{
+    color: #5a87ad;
+    text-align: center;
+    font-size: 10px;
+}
+
+#buttonbox{
+	height: 100px;
+	margin-top: 100px;
+	position: fixed;
+	width: 100%;
+	float: center;
+	text-align: center;
+}
+
+#button{
+    background-color: #5a87ad;
+    color: black;
+    width: 180px;
+    height: 50px;
+    float: center;
+    margin: auto;
+    text-align: center;
+    padding: 30px 10px 10px 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
+}
+
+
+
+/*Texts */
+h1{
+    margin-top: 100px;
+    color: #5a87ad;
+    text-align: center;
+}
+
+
+.button {
+	background-color:#5a87ad;
+	font-family: 'Montserrat', sans-serif;
+	font-size:12px;
+	text-decoration:none;
+	color:#fff;
+	position:relative;
+	padding:10px 20px;
+	padding-right:20px;
+	background-image: linear-gradient(bottom, rgb(62,51,46) 0%, rgb(101,86,78) 100%);
+	border-radius: 5px;
+	
+}
+
+.button:active {
+	top:3px;
+	background-image: linear-gradient(bottom, rgb(62,51,46) 100%, rgb(101,86,78) 0%);
+	box-shadow: inset 0px 1px 0px #9e8d84, 0px 2px 0px 0px #322620, 0px 5px 3px #999;
+}
+
+.button::before {
+	
+}
+
+.button:active::before {
+	top:50%;
+	margin-top:-12px;
+	box-shadow: inset 0px 1px 0px #827066, 0px 3px 0px #19120f, 0px 6px 3px #382e29;
+}
