@@ -1,0 +1,238 @@
+<!doctype html>
+
+<html class="portfolioPage" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Voronoi Fracturing</title>
+    <meta name="description" content="JosefineKlintberg">
+    <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Styles and fonts -->
+    <link rel="stylesheet" href="../style/style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="menu" id="topMenu">
+            <a href="../index.html">Home</a>
+           
+            <a href="./projects.html">Projects</a>
+
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="aboutTextPortfolio">
+            <h1>Voronoi Fracturing</h1>
+            <h2>University Project, 2 people - Autumn 2020</h2>
+            <p>A plugin for Maya to simulate realistic fracture behaviours</p>
+        </div>
+    </header>
+
+    <div id="content">
+        <img src="../img/portfolio/voronoiShatter.jpg" />
+        <div class="infoPortfolio">
+            <h1>Summary</h1>
+            <p class="cursive">
+                This is a plugin for Maya that uses Voronoi-diagrams in order to create fractured objects. The plugin is written mainly in C++ 
+                and with utilitary functions and GUI creation using Python, as well as some additional MEL-commands where needed. The plugin 
+                was created with a main focus on making it artist friendly and with a high level of material adaption that allows for creating a large variety of different breaking scenarios. 
+                The plugin was created as part of the course 'SFX - tricks of the trade' at Linköping University in collaboration with Linus Mossberg.
+            </p>
+            <p>
+                The destruction and breaking of objects are well used simulations in the world of special effects. Even though the subject is well researched, 
+                the creation of a framework that breaks objects in a realistic way according to their material is still offering challenges. 
+                The utilisation of Voronoi diagrams is a robust foundation in the creation of object fracturing and this project was 
+                performed with the aim of creating a well functioning Maya plugin that uses Voronoi partitioning in order to simulate breaking behaviour. 
+                The project was further extended with an investigating of how Voronoi diagrams can be used and tweaked in order to achieve 
+                breaking behaviours on a material basis by utilising bounding volumes, curves and particle systems. 
+            </p>
+
+            <!-- <iframe height="500px" src="" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe> -->
+
+            <div class="info moreLink">
+                <a href="">Code</a>
+            </div>
+
+            <h2>Technical Walkthrough</h2>
+            <p>
+                This project was carried out over a timeframe of 6 weeks and is based on Voronoi-diagrams. The project 
+                aimed at producing a well functioning plugin for Maya and some work consisted of learning 
+                the Maya API. Visual Studio was used in order to build the solution and resulted in a .mll file which 
+                can be loaded as a plugin into Maya through the Plugin Manager. 
+
+                The thoughts of material adaptation was brought into this project but with a focus on adapting material 
+                properties and force distributions such that an artist have the possibility to create a wide range of 
+                different materials and simulate their fracturing.
+            </p>
+
+            <p>
+                The algorithm used in this project produces an array of fragments which represents the fractured object. 
+                One fragment is created for each input seed-point whose Voronoi cell has a non-empty intersection with 
+                the input object. This means that the total number of generated fragments is somewhere between 1 and N, 
+                depending on the seed-point distribution.
+
+                The mesh clipping and capping methods uses commands from the Maya API since the project timeframe was 
+                not long enough for us to implement every part ourselves and we chose to focus on the material 
+                adaptation and optimization of the fracture process. 
+            </p>
+
+            <h2>Clip and Cap methods</h2>
+
+            <p>
+                The first approach was implemented using the built-in MEL-commands polyCut and polyCutBorder. 
+                Besides a mesh, the polyCut commands takes the clipping plane point v(m) and the euler angles between 
+                the clipping plane normal n(n) and the z-axis as arguments, and returns the mesh sliced by the clipping 
+                plane. The resulting faces on the positive side of the clipping plane is also removed by enabling the 
+                additional deleteFaces flag. The clipped mesh is then capped using the polyCloseBorder command.
+            </p>
+
+            <p>
+                The second approach was implemented using the MFnMesh::booleanOps function, 
+                which performs a selected Boolean operation between two input meshes. Clipping and capping can be 
+                performed with this function by generating a mesh that represents the clipping plane, and then by 
+                performing the Boolean intersection between the fragment mesh and the generated clipping plane mesh.
+            </p>
+
+            <p>
+                The clipping plane mesh was created by first generating a right-handed orthonormal basis for the 
+                clipping plane. This was done by first finding an arbitrary vector n(X) that is orthogonal to the 
+                clipping plane normal n(n), and then by finding the vector that is orthogonal to both n(n) and n(X) 
+                in right-handed order. Through testing, it was determined that the clipping mesh for the legacy 
+                version of the booleanOps function can be a simple non-manifold object such as a equilateral triangle polygon.
+            </p>
+
+            <h2>Optimizations</h2>
+
+            <p>
+                While the algorithm we had implemented, as described above, worked perfectly fine, it performs many unnecessary mesh 
+                clipping and capping operations that makes no difference to the resulting fragment. This is 
+                because only the clipping planes closest to the point v(p) ends up creating one of the faces of the resulting fragment. 
+                Using this observation, the following two optimizations were made that together reduces the number of 
+                mesh clipping and capping operations:
+            </p>
+
+            <p><b>Optimization 1</b></p>
+            <p>
+                Before the mesh clipping and capping is performed in the inner loop, all vertices of the fragment f is checked 
+                against the clipping plane. This can result in one of the following three scenarios:
+            </p>
+                
+                <ul>
+                    <li>All vertices are clipped</li>
+                    <li>No vertex is clipped</li>
+                    <li>Some vertices are clipped and some are not</li>
+                </ul>
+            
+            <p>  
+                In scenario 1, the mesh is completely clipped, which means that the fragment can be discarded and the inner loop 
+                can be terminated. In scenario 2, the clipping and capping operations would have no effect and the loop can 
+                continue with the next iteration. Only in scenario 3 will the mesh actually have to be clipped and capped. 
+            </p>
+
+            <p><b>Optimization 2</b></p>
+
+            <p>
+                Before the outer loop is initiated, a separate list of pointers to the seed-points is created. 
+                Within the outer loop, the list of seed-point pointers are then sorted by distance to the active seed point in 
+                ascending order. This list of seed-point pointers is then iterated through in the inner-loop. 
+                The result of this is that the clipping planes closest to the point v(p) is used first, which creates more cases 
+                of scenario 2 in Optimization 1.
+            </p>
+
+            <h2>Point distributions</h2>
+
+            <p>
+                The seed-point distribution uniquely determines the appearance of the fracture, and it is therefore important 
+                to have sufficient tools that can generate a wide range of point distributions. The seed-point distributions should 
+                be user controllable, but random at the same time to generate convincing fragments. We used the C++ standard random 
+                library was used to randomly sample seed-points, specifically the Mersene Twister pseudo-random generator of 
+                64-bit numbers. This random generator was used in conjunction with various user-guided Maya objects to generate different point distributions.
+            </p>
+
+            <img width="100%" src="../img/projects/planeGlass.png"/>
+            <p class="subim">Example of spherical point distribution within an implicit sphere with set radius.</p>
+
+            <img width="100%" src="../img/projects/curve1000.png"/>
+            <p class="subim">Example of distribution along a curve.</p>
+
+            <p>
+                Other notable point distributions used in this project was disk-distribution, stepped sphere and disk-distribution and distribution 
+                determined by a particle system in Maya. 
+            </p>
+
+            <h2>GUI creation</h2>
+            <p>
+                The creation of the graphical user interface was performed through Python code. The Python 
+                scripts was defined as C string variables in C++ using raw string literals in order to allow all 
+                files to be part of the same solution. The GUI scripts were further integrated in the project through
+                MGlobal::executePythonCommand in the initialization and uninitialization process. 
+            </p>
+
+            <p>
+                In order to achieve a plugin for Maya that is easily integrated, the first step of the GUI creation was to add a 
+                new menu bar in the main window bar in the viewport. This menu was designed as a generic class in Python with 
+                the instance variables as name, label, number of sub-menus and its connections to functions. The design was 
+                made in order to achieve scalability for the plugin in the future and more submenus was to be added. In the 
+                initialization of the plugin it is possible to define a menu with the number of submenus needed in this project 
+                as well as connect the corresponding function to call when pressing each submenu. 
+            </p>
+
+            <p>
+                A menu window was then created for interaction with the Voronoi fracturing and it was designed as a pop up 
+                window that launches when the user press the button in the submenu from the menu bar. 
+                The creation of the menu window was specifically designed to be for the Voronoi fracturing plugin but with 
+                utilisation functions for creating meshes and removing all objects in a scene. The functionality involves 
+                GUI buttons, sliders and drop-down menus that can add meshes to the scene, restore the scene and alter 
+                the properties of the Voronoi fracturing such as the number of fragments to split the mesh into. It also 
+                allows for easy integration for an artist with direct paths to the curve tool and particle systems 
+                through buttons. The instance variables for the class involves dimensions, title, number of fragments, 
+                curve radius, disk axis, number of steps, step noise and the minimum distance between points.
+            </p>
+
+            <center><img src="../img/projects/UI-menu.png"/></center>
+            <p class="subim">A screenshot of the GUI for the plugin.</p>
+
+            <h2>Material Renders</h2>
+
+            <img src="../img/portfolio/stoneShatter.png"/>
+            <p class="subim">A uniform bounding box distribution of points to simulate the breaking of stone.</p>
+
+            <img src="../img/projects/wayBroken.png"/>
+            <p class="subim">Point distribution along a curve to simulate heat fracture in asphalt.</p>
+
+            <img src="../img/projects/pavementCrack.png"/>
+            <p class="subim">The same distribution as above but after fracture propagation and seen from another angle.</p>
+
+            <img src="../img/portfolio/bullet.png"/>
+            <p class="subim">Point distribution around a sphere to simulate a high impact force striking a glass window.</p>
+
+            <p class="return">
+                <a href="./portfolio.html">Return to portfolio</a>
+                <a href="./projects.html">Return to projects</a>
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/josefine-klintberg-744b40149/" target="_blank"><img
+                src="../img/logo/linkedin.png"></a>
+        <a href="https://github.com/jklintan" target="_blank"><img src="../img/logo/github.png"></a>
+
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>

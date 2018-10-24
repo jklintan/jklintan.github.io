@@ -1,0 +1,153 @@
+<!doctype html>
+
+<html class="portfolioPage" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Phong's reflection model</title>
+    <meta name="description" content="JosefineKlintberg">
+    <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Styles and fonts -->
+    <link rel="stylesheet" href="../style/style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="menu" id="topMenu">
+            <a href="../index.html">Home</a>
+           
+            <a href="./projects.html">Projects</a>
+
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="aboutTextPortfolio">
+            <h1>Coding in OpenGL</h1>
+            <h2>Phong's local reflection model</h2>
+            <p>Implemented in OpenGL and GLSL</p>
+        </div>
+    </header>
+
+    <div id="content">
+        <img src="../img/portfolio/shading.png" />
+        <div class="infoPortfolio">
+            <h1>Summary</h1>
+            <p class="cursive">A project in OpenGL with the purpose of learning how to implement models in OpenGL and
+                write shaders in GLSL. Parts of the project was performed as part of the
+                course Computer Graphics at Linköping University, which I developed further on my own.
+            </p>
+            <p>The main task for the project was to set up an OpenGL environment in Visual Studio and learn how to
+                define objects using triangles, how to send data to the vertex buffer and implement basic vertex and
+                fragment shaders. </p>
+            <p>The shader part of the lab assignment was to implement Phong's local reflection model which I continued
+                working on and comparing different values on reflection constants.
+            </p>
+
+            <div class="info moreLink">
+                <a href="https://github.com/jklintan/OpenGL">Code</a>
+            </div>
+
+            <h1>Technical Walkthrough</h1>
+
+            <p>The Phong Lightning Model consists of three terms: The ambient, the diffuse and the specular term.
+            </p>
+
+            <p>
+                The ambient term comes from the physical model of light and the fact that it scatters around us and when
+                hitting other things it will reflect and therefore result in that some light reaches the object looked
+                at. This is called ambient lightning and in this simple model it is implement as just the product
+                between the ambient strength (that we set between 0 and 1) and the color of the light.
+            </p>
+
+            <p>The diffuse light simulates the light that actually hits the object itself. We will give the pixels that
+                are closer to the light rays from the light source more brightness than the pixels farther away.</p>
+
+            <div class="subfloat">
+                <img src="../img/projects/ambient.png" />
+                <img src="../img/projects/ambientANDdiffuse.png" />
+                The difference between only ambient lightning and when the diffuse term is added.
+            </div>
+
+            <p>Specular light is simulated based on the reflections of the light and how the viewer sees this. With the
+                help of the position of the light and the viewer and the normal of the surface we can calculate the
+                angular difference between the reflected light and the view direction. The closer angle between them,
+                the greater influence of the specular light we will get. We will raise the specular component to a power
+                of a number which we define as the 'shininess' of the object. The higher the value, the more the object
+                reflects light instead of scattering and therefore we will get a more defined circle and smaller
+                highlight.
+            </p>
+
+            <div class="subfloat">
+                <img src="../img/projects/ads4.png" />
+                <img src="../img/projects/ads64.png" />
+                Specular light added. The difference between an exponent of 4 and one of 64.
+            </div>
+
+            <p>I continued on with adding imagebased textures to the model. This was done by first assigning texture
+                coordinates
+                to the object and then loading an image that was added to the object.
+            </p>
+
+            <div class="subfloat">
+                <img src="../img/projects/textured.png" />
+                <img src="../img/projects/textured2.png" />
+            </div>
+
+            <p>As a last step the lightning model was added onto the textured objects. The diffuse
+                term in Phong's model now comes from the texture.
+            </p>
+
+            <div class="subfloat">
+                <img src="../img/projects/texturedlight.png" />
+                <img src="../img/projects/textured2light.png" />
+            </div>
+
+            <p>I continued the project with adding a sphere that was placed at the same place as the simulated light
+                source.
+                Using keyboard input it is now possible to move the light around the object to see the appearance when
+                the light
+                hits from different angles.
+            </p>
+
+            <div class="subfloat">
+                <img src="../img/projects/movelight1.png" />
+                <img src="../img/projects/specularMove1.png" />
+                Implementation of moving light source for two different objects. In the right image there is a high
+                specular reflectance.
+            </div>
+
+            <p class="return">
+                <a href="./projects.html">Return to all projects</a>
+            </p>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/josefine-klintberg-744b40149/" target="_blank"><img
+                src="../img/logo/linkedin.png"></a>
+        <a href="https://github.com/jklintan" target="_blank"><img src="../img/logo/github.png"></a>
+
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>

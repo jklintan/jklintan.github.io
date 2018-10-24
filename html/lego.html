@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html class="portfolioPage" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Lego Website</title>
+    <meta name="description" content="JosefineKlintberg">
+    <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Styles and fonts -->
+    <link rel="stylesheet" href="../style/style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="menu" id="topMenu">
+            <a href="../index.html">Home</a>
+           
+            <a href="./projects.html">Projects</a>
+
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="aboutTextPortfolio">
+            <h1>Lego Database Project</h1>
+            <h2>Group Project: 4 people - Created autumn 2018</h2>
+            <p>Website and Database project</p>
+        </div>
+    </header>
+
+    <div id="content">
+        <img src="../img/projects/legofront.png" />
+        <div class="infoPortfolio">
+            <h1>Summary</h1>
+            <p class="cursive">This project was part of the course Electronic Publishing at Linköping University. The
+                task for the group was to use MySQL and PHP to collect data from a database about lego sets and pieces.
+                Then we should display different statistics about the database in a accurate way with the use of
+                Javascript, HTML and CSS.
+            </p>
+
+            <p>We implemented a number of different graphs as well as some "fun facts" from the database and also
+                implemented a search function to
+                allow the user to find specific sets and see statistics of the pieces that the set contains.
+            </p>
+
+            <p>My responsabilities was mostly coding in MySQL and PHP to ensure that we collected the correct data from
+                the database. Full project site can be found
+                <a href="http://www.student.itn.liu.se/~joskl841/project/" target="_blank">here</a>
+            </p>
+
+
+
+            <h1>Technical Walkthrough</h1>
+
+
+            <p>The task of the project was to create an interface to calculate and show different kinds of statistics
+                over a lego database
+                in an appropriate way. We should use different kind of graphs and we couldn't use any pre-built code for
+                graphs. The
+                thought customer is a person that wants to keep track of pieces of legos or see which pieces are harder
+                or easier to find.
+            </p>
+
+            <p>We chose to use PHP to collect data that could be sent to the client that displays the graphs using
+                Javascript. In this way we reduced
+                the workload for the server and could use Javascript to create, animate and change the graphs. </p>
+
+            <img src="../img/projects/lego1.png" />
+
+            <p>We created 4 different graphs using Javascript, a bar chart, a line chart, a pie chart and a small info
+                square
+                with arrows to display some small statistics.
+            </p>
+
+            <p>The project was assessed on both the task, validation of the code and the design. We finished with adding
+                the style to the page where we wanted
+                to focus on a clean and simple page that was effective.
+            </p>
+
+            <img src="../img/projects/lego2.png" />
+            <img src="../img/projects/lego3.png" />
+            <img src="../img/projects/lego4.png" />
+
+            <p class="return">
+                <a href="./projects.html">Return to all projects</a>
+            </p>
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/josefine-klintberg-744b40149/" target="_blank"><img
+                src="../img/logo/linkedin.png"></a>
+        <a href="https://github.com/jklintan" target="_blank"><img src="../img/logo/github.png"></a>
+
+    </footer>
+
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html class="portfolioPage" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Carnumber Generator</title>
+    <meta name="description" content="JosefineKlintberg">
+    <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Styles and fonts -->
+    <link rel="stylesheet" href="../style/style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="menu" id="topMenu">
+            <a href="../index.html">Home</a>
+           
+            <a href="./projects.html">Projects</a>
+
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="aboutTextPortfolio">
+            <h1>Carnumber Generator</h1>
+            <h2>Project: 1 person - Created spring 2016</h2>
+            <p>Datastructure project in Python</p>
+        </div>
+    </header>
+
+    <div id="content">
+        <img src="../img/projects/cargeneratorfront.png" />
+        <div class="infoPortfolio">
+            <h1>Summary</h1>
+            <p class="cursive">This project was part of the introduction course in Python coding at KTH during spring
+                2016. The course consisted of labs, a written exam and one individual project task. I chose
+                the task of implementing a program that validatates carnumbers as well as generates allowed carnumbers.
+            </p>
+
+            <p>Since the program should allow the user to read in carnumbers from a file I needed to store the input in
+                a datastructure and
+                for efficiency I chose a binary search tree which I implemented in a separate code file.
+            </p>
+
+            <p>The program has a startmenu to allow interaction with the user and you can choose to either generate
+                numbers or control them.
+                If you want to generate numbers the program asks the user to enter how many numbers they wish to
+                generate and to which file they should appear in.
+            </p>
+
+            <p>If the user instead choose to control carnumbers they can choose between either control single numbers by
+                just entering them in the terminal or
+                read them from a file. If they choose to read in from file then the control of the numbers are outputted
+                to another textfile with OK or NOT OK written after the number.
+            </p>
+
+            <p>Code can be found
+                <a href="https://github.com/jklintan/carnumber_generator" target="_blank">here</a>
+            </p>
+
+
+            <p class="return">
+                <a href="./projects.html">Return to all projects</a>
+            </p>
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/josefine-klintberg-744b40149/" target="_blank"><img
+                src="../img/logo/linkedin.png"></a>
+        <a href="https://github.com/jklintan" target="_blank"><img src="../img/logo/github.png"></a>
+
+    </footer>
+
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>

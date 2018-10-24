@@ -1,0 +1,113 @@
+<!doctype html>
+
+<html class="portfolioPage" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Ice Racing</title>
+    <meta name="description" content="JosefineKlintberg">
+    <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Styles and fonts -->
+    <link rel="stylesheet" href="../style/style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="menu" id="topMenu">
+            <a href="../index.html">Home</a>
+           
+            <a href="./projects.html">Projects</a>
+
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="aboutTextPortfolio">
+            <h1>Ice Racing</h1>
+            <h2>Personal Project - Created september 2018</h2>
+            <p>Small game made in Unity</p>
+        </div>
+    </header>
+
+    <div id="content">
+        <img src="../img/projects/icefront.png" />
+        <div class="infoPortfolio">
+            <h1>Summary</h1>
+            <p class="cursive">This project was a hobby project that I created to test out creating a game in Unity. I
+                wanted to try out the 3D environment and design a first person view game.
+            </p>
+
+            <p>The focus was to test out different techniques and create something that could be played. I started out
+                with creating the environment and continued on with adding steering for the player and camera angles.
+                Then I continued on with the possibility to collect coins and a timer so the player only has a certain
+                time to collect all coins.
+            </p>
+
+            <p>Lastly I created a small menu to practice on allowing user input. A small video when playing the game can
+                be seen below.
+            </p>
+
+            <iframe height="500px" src="https://www.youtube.com/embed/HKA6Mv-tHNo" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+            <h1>Technical Walkthrough</h1>
+            <p>The game starts with a simple menu that I just added text and buttons to and a small script attached to
+                it that saves the users settings for the game. </p>
+
+            <img src="../img/projects/icemenu.png" />
+
+            <p>The Ice World is done just by using a simple plane as start and then adding height to certain places in
+                the area. The "car" that the player steers is just a simple capsule that
+                is placed in a horizontal position and fixed in this position so that it can't fall to the side. Then a
+                velocity and acceleration is added.
+            </p>
+
+            <img src="../img/projects/iceworld.png" />
+
+            <p>The coins are placed out randomly and has a hitbox attached so when the players hitbox reaches a coin, it
+                disapears and one point adds to the players score. A small sound effect is also added
+                for collecting the coins.
+            </p>
+
+            <img src="../img/projects/icetime.png" />
+
+
+            <p>Lastly a timer is implemented that starts when the game starts and the player will get a notice when it
+                is 10 seconds left and a counter displays in the bottom of the screen. If the player
+                don't collect all coins before the time runs up, the player loses.
+            </p>
+
+            <p>This is a game with lots of work left but the purpose of the project was just a fun weekend project to
+                get started in the Unity environment.
+            </p>
+
+            <p class="return">
+                <a href="./projects.html">Return to all projects</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/josefine-klintberg-744b40149/" target="_blank"><img
+                src="../img/logo/linkedin.png"></a>
+        <a href="https://github.com/jklintan" target="_blank"><img src="../img/logo/github.png"></a>
+
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>
