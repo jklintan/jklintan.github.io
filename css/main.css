@@ -12,6 +12,12 @@ body{
     text-align: center;
 }
 
+#textbox{
+	width: 60%;
+	text-align: left;
+	float: center;
+}
+
 #advice_box{
     color: #5a87ad;
     text-align: center;
