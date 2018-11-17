@@ -16,6 +16,27 @@ header {
     margin: 0;
 }
 
+
+header * {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 40px;
+    transition: 200ms;
+    color: #fff;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+header *:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #fff;
+}
+
+header .active {
+    border-bottom: 2px solid #fff;
+}
+
 #container{
     width: 100%;
     text-align: center;
