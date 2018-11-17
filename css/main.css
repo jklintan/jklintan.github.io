@@ -7,6 +7,15 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dddbd1;
+    width: 100vw;
+    margin: 0;
+}
+
 #container{
     width: 100%;
     text-align: center;
