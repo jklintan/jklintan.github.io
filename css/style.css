@@ -67,9 +67,8 @@ header a.active{
 
 #intro{
 	font-family: 'larish_neuesemibold';
-	width: 75vw;
+	width: 100vw;
 	text-align: center;
-	margin: auto;
 	background-color: #222;
 	color: #fff;
 	display: flex;
@@ -81,6 +80,7 @@ header a.active{
 
 #intro img{
 	width: 200px;
+	margin-bottom: 20px;
 }
 
 #intro h1{
@@ -95,10 +95,11 @@ header a.active{
 
 #intro p{
 	margin: auto;
+	width: 75vw;
 	padding-top: 20px;
 	text-align: center;
 	font-size: 1.5em;
-
+	float: center;
 }
 
 #buttons{
@@ -130,6 +131,7 @@ header a.active{
 	align-items: center;
 	vertical-align: center;
 	padding-top: 10vh;
+	margin: auto;
 	text-align: center;
 }
 
@@ -147,91 +149,7 @@ footer{
 	height: 10vh;
 }
 
-#projects{
-	width: 70vw;
-	margin: auto;
-}
 
-.project{
-	clear: left;
-	min-height: 238px;
-	margin-bottom: 100px;
-	position: relative;
-	z-index: 1;
-	padding: 0;
-	text-align: center;
-}
-
-.project_image{
-	margin: auto;
-	max-width: 70%;
-	max-height: 400px;
-}
-
-.project img{
-	margin-bottom: 20px;
-	display: inline-block;
-}
-
-.project_text{
-	width: 100%;
-}
-
-.project h3{
-	text-transform: uppercase;
-	text-align: center;
-	font-size: 30px;
-}
-
-.project h4{
-	text-transform: uppercase;
-	text-align: center;
-	color: #456327;
-	font-size: 13px;
-}
-
-.project_text p{
-	font-size: 16px;
-	width: 100%;
-	margin: auto;
-	text-align: justify;
-	margin-bottom: 20px;
-}
-
-.project_text button{
-	width: 80px;
-	border: 1px solid #343434;
-}
-
-.project_foot{
-	border-top: 1px solid grey;
-	display: flex;
-	text-align: center;
-	margin-bottom: 40px;
-}
-
-.project_foot .ects{
-	flex-direction: column;
-}
-
-.project_foot .time_lim{
-	flex-direction: column;
-	margin-left: 30px;
-}
-
-.project .more{
-	margin-bottom: 20px;
-	border: 2px solid grey;
-	padding: 10px 30px;
-}
-
-a.more{
-	color: #343434;
-}
-
-a:hover.more{
-	border: 2px solid green;
-}
 
 	@font-face {
 	font-family: 'intro';
@@ -368,6 +286,9 @@ a:hover.more{
 	
 	#buttons a{
 		width: 50vw;
+		float: center;
+		margin: auto;
+		margin-bottom: 25px;
 	}
 
 	#buttons{
