@@ -196,6 +196,45 @@ header a.active{
 	color: rgb(200, 180, 100);
 }
 
+#portfolio{
+	flex-direction: row;
+	width: 80vw;
+	margin: auto;
+	float: center;
+	margin-top: 100px;
+
+}
+
+.portfolioItem{
+	padding-top: 10px;
+	color: #222;
+	margin-bottom: 100px;
+	width: auto;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.portfolioItem img{
+	max-width: 100%;
+	margin: auto;
+}
+
+.portfolioItem h5{
+	background-color: rgb(200, 180, 100);
+	padding: 20px;
+	color: #222;
+	letter-spacing: 5px;
+	font-weight: bold;
+	white-space: nowrap;
+	flex-direction: column;
+	margin-left: -2%;
+	margin-right: -2%;
+}
+
+.portfolioItem p{
+	color: #222;
+	padding: 20px;
+}
+
 #portfolioStart{
 	padding-top: 50px;
 	display: flex;
@@ -588,15 +627,5 @@ footer a{
 		padding-top: 50px;
 		width: 100%;
 	}
-
-	.resume{
-		width: 90%;
-	}
 	
-}
-
-@media screen and (max-width: 1200px) {
-	.resume{
-		width: 90%;
-	}
 }
