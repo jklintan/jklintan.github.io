@@ -196,6 +196,95 @@ header a.active{
 	color: rgb(200, 180, 100);
 }
 
+#portfolio{
+	flex-direction: column;
+	width: 80vw;
+	margin: auto;
+	float: center;
+	margin-top: 100px;
+	display: flex;
+}
+
+.portfolioItem{
+	width: 100%;
+	flex-direction: column;
+	display: flex;
+	padding-top: 10px;
+	color: #fff;
+	margin-bottom: 100px;
+	width: auto;
+	font-family: 'Libre Baskerville', serif;
+	padding: 30px;
+	font-size: 1em;
+	margin: 20px;
+	text-align: justify;
+}
+
+.content{
+	flex-direction: row;
+}
+
+.portfolioItem h3{
+	font-family: 'Libre Baskerville', serif;
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: 50px;
+	color:  rgb(200, 180, 100);
+}
+
+.portfolioBigger{
+	width: 55%;
+	float: left;
+	padding-right: 5%;
+}
+
+.portfolioSmaller{
+	float: right;
+	width: 40%;
+}
+
+.portfolioBigger2{
+	width: 55%;
+	float: right;
+	padding-left: 5%;
+}
+
+.portfolioSmaller2{
+	float: left;
+	width: 40%;
+}
+
+
+.separator{
+	width: 100%;
+	font-size: 40px;
+	color:  rgb(200, 180, 100);
+	text-align: center;
+	letter-spacing: 10px;
+}
+
+.portfolioItem img{
+	max-width: 100%;
+	margin: auto;
+}
+
+.portfolioItem h5{
+	background-color: rgb(200, 180, 100);
+	padding: 20px;
+	color: #222;
+	letter-spacing: 5px;
+	font-weight: bold;
+	white-space: nowrap;
+	flex-direction: column;
+	margin-left: -2%;
+	margin-right: -2%;
+}
+
+.portfolioItem p{
+	color: #222;
+	padding: 20px;
+}
+
 #portfolioStart{
 	padding-top: 50px;
 	display: flex;
@@ -369,7 +458,7 @@ footer{
 	color:  rgba(200, 180, 100, 0.5);
 	font-family:'larish_neuesemibold';
 	padding-bottom: 30px;
-	padding-top: 10px;
+	padding-top: 50px;
 }
 
 footer a{
@@ -589,4 +678,27 @@ footer a{
 		width: 100%;
 	}
 	
+}
+
+@media screen and (max-width: 900px) {
+
+	.portfolioBigger{
+		width: 100%;
+		float: left;
+		margin: 0px 0px 30px 0px;
+	}
+	
+	.portfolioSmaller{
+		float: left;
+		width: 100%;
+	}
+	
+	.portfolioBigger2{
+		width: 100%;
+		margin: 30px 0px 0px 0px;
+	}
+	
+	.portfolioSmaller2{
+		width: 100%;
+	}
 }
