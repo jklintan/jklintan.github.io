@@ -1,10 +1,10 @@
 body{
 	font-family: 'Open sans';
 	margin: 0;
-	background-color: #222;
+	background-color: #f4f4f4;
 	min-height: 100vh;
 	max-width: 100vw;
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 	position: relative;
 }
 
@@ -46,11 +46,42 @@ html{
 	font-style: normal;
 }
 
-
+.blueCol{
+	color: #569cd6;
+}
 
 p{
 	font-size: 16px;
 }
+
+p.roboto{
+	font-family: 'Open Sans';
+	font-style: bold;
+	font-size: 70px;
+	color: #569cd6;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+p.roboto2{
+	font-family: 'Roboto Mono', monospace;
+	font-size: 18px;
+	color: #222;
+}
+
+p.roboto3{
+	font-family: 'Roboto Mono', monospace;
+	font-size: 16px;
+	color: #222;
+}
+
+p.comment{
+	font-family: 'Open Sans';
+	font-size: 28px;
+	font-weight: bold;
+	color: #222;
+}
+
 a{
 	color: white;
 	text-decoration: none;
@@ -76,7 +107,7 @@ header{
 
 header a{
 	padding-left: 25px;
-	color: white;
+	color: #222;
 	font-family: 'larish_neuesemibold';
 }
 
@@ -153,13 +184,27 @@ header a.active{
 }
 
 #intro{
-	font-family: 'larish_neuesemibold';
+	font-family: 'Open Sans';
 	width: 100vw;
+	float: left;
 	text-align: center;
-	background-color: #222;
-	color: #fff;
-	display: flex;
+	margin: auto;
+	color: #222;
+	background-color: #f4f4f4;
 	margin-bottom: 100px;
+	padding-top: 50px;
+}
+
+.intro{
+	font-family: 'Open Sans';
+	width: 100vw;
+	float: left;
+	text-align: left;
+	margin: auto;
+	color: #222;
+	background-color: #f4f4f4;
+	margin-bottom: 100px;
+	padding-top: 50px;
 }
 
 
@@ -169,7 +214,17 @@ header a.active{
 	padding: 20px;
 }
 
-#intro h1{
+.item h3{
+	margin: 10px;
+}
+
+.item p{
+	font-size: 13px;
+	text-align: justify;
+	margin: 10px;
+}
+
+.intro h1{
 	font-size: 35px;
 	padding: 0;
 	float: center;
@@ -179,79 +234,21 @@ header a.active{
 	/*font-family: 'Libre Barcode 128 Text', cursive; */
 }
 
-#intro p{
+#intro p, .intro p{
 	margin: auto;
-	width: 75vw;
+	width: 80vw;
 	padding-top: 20px;
-	text-align: center;
-	font-size: 1.5em;
 	float: center;
 }
+
 
 #intro p a{
-	color: rgb(200, 180, 100);
+	color: #569cd6;
 }
 
-.yellow{
-	color: rgb(200, 180, 100);
-}
-
-#portfolio{
-	flex-direction: column;
-	width: 80vw;
-	margin: auto;
-	float: center;
-	margin-top: 100px;
-	display: flex;
-}
-
-.portfolioItem{
-	width: 100%;
-	flex-direction: column;
-	display: flex;
-	padding-top: 10px;
-	color: #fff;
-	margin-bottom: 100px;
-	width: auto;
-	font-family: 'Libre Baskerville', serif;
-	padding: 30px;
-	font-size: 1em;
-	margin: 20px;
-	text-align: justify;
-}
 
 .content{
 	flex-direction: row;
-}
-
-.portfolioItem h3{
-	font-family: 'Libre Baskerville', serif;
-	font-size: 25px;
-	text-align: center;
-	margin-bottom: 50px;
-	color:  rgb(200, 180, 100);
-}
-
-.portfolioBigger{
-	width: 55%;
-	float: left;
-	padding-right: 5%;
-}
-
-.portfolioSmaller{
-	float: right;
-	width: 40%;
-}
-
-.portfolioBigger2{
-	width: 55%;
-	float: right;
-	padding-left: 5%;
-}
-
-.portfolioSmaller2{
-	float: left;
-	width: 40%;
 }
 
 
@@ -321,13 +318,12 @@ header a.active{
 }
 
 .resume{
-	width: 50%;
+	width: 70%;
 	padding: 0px;
 	margin: auto;
-	color: #fff;
-	font-family: 'larish_neuesemibold';
-	margin-bottom: 100px;
-	margin-top: 100px;
+	color: #222;
+	margin-bottom: 200px;
+	margin-top: 200px;
 	display: flex;
 	flex-direction: column;
 }
@@ -338,6 +334,7 @@ header a.active{
 	width: 100%;
 	text-align: center;
 	padding: 50px 0 50px 0;
+	margin: 100 0;
 }
 
 ul {
@@ -346,7 +343,7 @@ ul {
 
 li::before {
 	content: "\25AA"; 
-	color: rgb(200, 180, 100);
+	color: #569cd6;
 	display: inline-block; 
 	width: 1em;
 	font-size: 20px;
@@ -357,19 +354,19 @@ li::before {
 }
 
 .resume a {
-	color: rgb(200, 180, 100);
+	color: #569cd6;
 }
 
 .more{
 	font-size: 0.9em;
 	border-left: 1px solid;
-	border-color: rgb(200, 180, 100);
+	border-color: #569cd6;
 	padding: 10px;
 	margin-left: 4%;
 }
 
 .courses a{
-	color: rgb(200, 180, 100);
+	color: #569cd6;
 }
 
 .resume h1{
@@ -382,8 +379,9 @@ li::before {
 }
 
 .resume strong{
-	color: rgb(200, 180, 100);
+	color: #569cd6;
 	float: right;
+	padding-top: 5px;
 }
 
 .year{
@@ -395,47 +393,160 @@ li::before {
 	width: 60%;
 	padding: 0px;
 	margin: auto;
-	color: #fff;
-	font-family: 'larish_neuesemibold';
+	color: #222;
 	margin-top: 100px;
 	margin-bottom: 100px;
 }
 
 .info_dark a{
-	color: rgb(200, 180, 100);
+	color:#569cd6;
 }
 
 #buttons{
 	margin-top: 60px;
+	float: center;
+	margin-bottom: 100px;
 }
 
 #buttons a{
-	border: 1px solid white;
+	border: 2px solid #569cd6;
+	color: #569cd6;
 	padding: 20px 40px 20px 40px;
 	margin: 10px;
 	text-transform: uppercase;
-	font-family: 'hk_groteskbold';
 	font-weight: 100;
+	float: center;
 }
 
 #buttons a:hover{
-	color: rgb(200, 180, 100);
-	border: 1px solid;
-	border-color: rgb(200, 180, 100);
+	color: #222;
+	border: 2px solid;
+	border-color: #222;
 }
 
 #container{
 	width: 100vw;
 }
 
+#portfolioItems{
+	width: 75vw;
+	display: flex;
+	margin: 0 auto;
+	flex-direction: row;
+	margin-top: 20px;
+}
+
+.allItems{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    position: relative;
+    gap: 15px 15px;
+}
+
+h1{
+	color: #569cd6;
+	width: 75vw;
+	margin: auto;
+}
+
+.aboutMe img{
+	max-width: 300px;
+	margin-left: 10%;
+	margin: 100px;
+}
+
+.aboutMe{
+	margin-top: 400px;
+	background-color: #569cd6;
+	width: 100vw;
+	margin-bottom: 100px;
+}
+
+.blank{
+	width: 100vw;
+	background-color: #f4f4f4;
+	height: 200px;
+}
+
+.item{
+	background-color: #fff;
+	margin-bottom: 10px;
+	max-width: 100%;
+	margin-right: 10px;
+	margin-top: 15px;
+	flex-direction: column;
+	display: inline-block;
+
+	-webkit-box-shadow: 0px 0px 7px -1px rgba(0,2,34,0.21);
+	-moz-box-shadow: 0px 0px 7px -1px rgba(0,2,34,0.21);
+	box-shadow: 0px 0px 7px -1px rgba(0,2,34,0.21);
+}
+
+.item p, h3{
+	padding: 10px;
+	margin-bottom: 0;
+}
+
+.item :hover{
+
+}
+
+.item .info{
+	margin-left: 20px;
+	font-size: 11px;
+	color: #569cd6;
+	margin-top: -15px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.item .links{
+	margin-left: 20px;
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+
+.item a{
+	border: 2px solid #222;
+	color: #222;
+	font-size: 11px;
+	padding: 10px;
+	margin-right: 5px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.item a:hover{
+	border-color: #569cd6;
+}
+
+
+.allItems :hover{
+
+}
+
+.item img{
+	width: 100%;
+	display: inline-block;
+}
+
+.item img :hover{
+	opacity: 0.3;
+} 
+
+@media (max-width: 800px){
+	.item{
+		max-width: 100%;
+	}
+}
+
 .about{
 	height: 100%;
-	justify-content: center;
 	align-items: center;
 	vertical-align: center;
 	padding-top: 10vh;
 	margin: auto;
-	text-align: center;
+	float: center;
 }
 
 .about h1{
@@ -443,7 +554,6 @@ li::before {
 }
 
 .about p{
-	text-align: justify;
 }
 
 footer{
@@ -455,7 +565,7 @@ footer{
 	margin: auto;
 	position: absolute;
 	width: 100%;
-	color:  rgba(200, 180, 100, 0.5);
+	color:  #569cd6;
 	font-family:'larish_neuesemibold';
 	padding-bottom: 30px;
 	padding-top: 50px;
@@ -463,7 +573,7 @@ footer{
 
 footer a{
 	padding: 0 20px 0px 20px;
-	color: rgba(200, 180, 100, 0.5);
+	color: #569cd6;
 }
 
 .github{
@@ -507,11 +617,12 @@ footer a{
   .topnav a {
 	float: left;
 	display: block;
-	color: #fff;
+	color: #000;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
 	font-size: inherit;
+	font-family: 'Roboto Mono', monospace;
   }
   
 
@@ -522,7 +633,8 @@ footer a{
 	}
 
 	.topnav a.active{
-		color: rgb(200, 180, 100);
+		/*color: rgb(200, 180, 100);*/
+		color: #000;
 	}
   
   /* Dropdown container - needed to position the dropdown content */
@@ -538,19 +650,19 @@ footer a{
 	display: inline-block;
 	border: none;
 	outline: none;
-	color: #fff;
+	color: #000;
 	padding: 14px 16px;
 	background-color: inherit;
 	font-family: inherit;
 	margin: 0;
-	font-family: 'larish_neuesemibold';
+	font-family: 'Roboto Mono', monospace;
   }
   
   /* Style the dropdown content (hidden by default) */
   .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: #333;
+	background-color: #f4f4f4;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
@@ -559,7 +671,7 @@ footer a{
   /* Style the links inside the dropdown */
   .dropdown-content a {
 	float: none;
-	color: #fff;
+	color: #000;
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
@@ -568,12 +680,14 @@ footer a{
   
   /* Add a dark background on topnav links and the dropdown button on hover */
   .topnav a:hover, .dropdown:hover .dropbtn .topnav a.active {
-		color: rgb(200, 180, 100);
+		/*color: rgb(200, 180, 100);*/
+		color: #569cd6;
   }
   
   /* Add a grey background to dropdown links on hover */
   .dropdown-content a:hover {
-	color: rgb(200, 180, 100);
+	/*color: rgb(200, 180, 100);*/
+	color: #569cd6;
   }
   
   /* Show the dropdown menu when the user moves the mouse over the dropdown button */
@@ -595,6 +709,14 @@ footer a{
   /* Responsive */
   @media screen and (max-width: 600px) {
 
+	.portfolioItems{
+		width: 100%;
+	}
+
+	.item{
+		width: 100%;
+	}
+
 	.about{
 		width: 100vw;
 		padding: 20px;
@@ -610,7 +732,7 @@ footer a{
 	  float: none;
 	  display: block;
 	  text-align: left;
-	  background-color: #333;
+	  background-color: #f4f4f4;
 	}
 	.topnav.responsive .dropdown {
 		float: none;
@@ -627,7 +749,7 @@ footer a{
 	  display: block;
 	  width: 100%;
 	  text-align: left;
-	  background-color: #333;
+	  background-color: #f4f4f4;
 	}
 	
 	#buttons a{
@@ -682,6 +804,32 @@ footer a{
 
 @media screen and (max-width: 900px) {
 
+	ul{
+		padding: 2px;
+	}
+
+	.resume strong{
+		padding-top: 12px;
+	}
+
+	.resume{
+		width: 90%;
+		margin: auto;
+		font-size: 10px;
+	}
+
+	p.roboto{
+		font-size: 50px;
+	}
+
+	.portfolioItems{
+		width: 100%;
+	}
+	
+	.item{
+		width: 100%;
+	}
+
 	.portfolioBigger{
 		width: 100%;
 		float: left;
@@ -700,5 +848,14 @@ footer a{
 	
 	.portfolioSmaller2{
 		width: 100%;
+	}
+
+	#portfolio{
+		flex-direction: column;
+		width: 100vw;
+		margin: auto;
+		float: center;
+		margin-top: 100px;
+		display: flex;
 	}
 }
