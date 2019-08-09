@@ -159,6 +159,7 @@ header{
     width: 50vw;
     float: center;
     margin: auto;
+    margin-top: 70px;
 }
 
 .info img, .infoPortfolio img{
