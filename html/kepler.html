@@ -1,0 +1,147 @@
+<!doctype html>
+
+<html class="portfolioPage" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>The Kepler Problem</title>
+    <meta name="description" content="JosefineKlintberg">
+    <meta name="author" content="SitePoint">
+
+    <!-- Styles and fonts -->
+    <link rel="stylesheet" href="../style/style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="menu" id="topMenu">
+            <a href="../index.html">Home</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./photography.html">Photography</a>
+            <a href="./about.html">About me</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="aboutTextPortfolio">
+            <h1>The Kepler Problem</h1>
+            <h2>Group Project: 2 people - Created spring 2016</h2>
+            <p>Numerical problem solving in Matlab</p>
+        </div>
+    </header>
+
+    <div id="content">
+        <img src="../img/projects/keplerfront.png" />
+        <div class="infoPortfolio">
+            <h1>Summary</h1>
+            <p class="cursive">This project was part of the course Numerical Analysis at KTH. The task was to solve the
+                Kepler problem approximately over long time
+                using different numerical methods. Then we compared the difference between the different methods. </p>
+
+            <p>The main purpose was to study Hamiltonian systems and thereby we needed to prove that the Kepler
+                Equations is
+                a Hamiltonian system. We used forward Euler, backward Euler, symplectic Euler, midpoint method and ode45
+                as different numerical ways to
+                solve the Kepler problem.
+            </p>
+
+            <p>The project was further continued with pure mathematical parts where we numrically solved other
+                Hamiltonian systems as the Wave Equation (using d'Alemberts formula) and the Schrodinger Equation as
+                well as
+                investigated the Verlets method. The main conclusion of the project was that it is an advantage to use
+                symplectic Euler when solving
+                Hamiltonian systems in a numerical way since this approach conserves the energy in the best way of the
+                different methods. </p>
+
+
+
+
+            <h1>Technical Walkthrough</h1>
+
+            <p>The Kepler Problem looks like following: </p>
+
+            <center><img src="../img/projects/keplerProblem.png" /></center>
+
+            <p>For a Hamiltonian system the following equation is satisfied and further we proved that the energy is
+                constant for any Hamiltonian system (for the exact solution). </p>
+
+            <center><img src="../img/projects/hamiltonian.png" /></center>
+
+            <p>To being able to compare the different numerical methods we plotted the trajectories in a 2D coordinate
+                system. Since the Kepler problem equations describe the
+                so called "two body problem" where two bodies attracts eachother. Newton prooved mathematically that the
+                trajectory
+                turns out to be an elliptical shape with an excentricity a that is between 0 and 1.
+            </p>
+
+            <p>Below you can find the trajectories for the forward Euler, backward Euler, midpoint-method and symplectic
+                Euler.</p>
+
+            <center><img src="../img/projects/euler.png" /></center>
+            <center><img src="../img/projects/euler2.png" /></center>
+
+
+            <p>We continued on with plotting the energy as function of time for the different methods: </p>
+
+            <center><img src="../img/projects/energy.png" /></center>
+
+            <p>We could see that the different methods have different energy preservance. In the forward Euler, the
+                energy goes up with time and
+                the opposite for the backward Euler (which means that the planet trajectory goes inwards towards the
+                center of the ellips).
+            </p>
+
+            <p>For the other two methods (midpoint and symplectic) the energy is almost constant over time and we can
+                see this in the trajectories since
+                they are moving in the same trajectory (not going inwards or outwards). Since we know that planets move
+                in constant trajectories we conclude that
+                the two last methods are the best to use for numerical solution in the Kepler case.
+            </p>
+
+            <p>We did the same analysis for the ode45 in Matlab and we could see that the trajectory quickly falled into
+                the middle and thereby
+                concluded that this is not a preferable method for simulating trajectories.
+            </p>
+
+            <center><img src="../img/projects/ode45.png" /></center>
+
+            <p>The other numerical approaches for solving PDEs can be seen in the report as well as an appendix with the
+                Matlab code (note, the report is in Swedish).
+            </p>
+            <p><a href="../files/kepler.pdf" target="_blank">Report</a></p>
+
+            <p class="return">
+                <a href="./projects.html">Return to all projects</a>
+            </p>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/josefine-klintberg-744b40149/" target="_blank"><img
+                src="../img/logo/linkedin.png"></a>
+        <a href="https://github.com/jklintan" target="_blank"><img src="../img/logo/github.png"></a>
+        <a href="https://www.youtube.com/channel/UCMLbxzqNRCbDEJ7yqxcNPpQ/featured?view_as=subscriber"
+            target="_blank"><img src="../img/logo/youtube.png"></a>
+        <a href="mailto:josefine.klintberg@hotmail.com"><img src="../img/logo/mail.png"></a>
+    </footer>
+
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>

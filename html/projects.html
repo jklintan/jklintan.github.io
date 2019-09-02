@@ -1,0 +1,184 @@
+<!doctype html>
+
+<html class="projectPage" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Josefine Klintberg</title>
+    <meta name="description" content="JosefineKlintberg">
+    <meta name="author" content="SitePoint">
+
+    <!-- Styles and fonts -->
+    <link rel="stylesheet" href="../style/style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="menu" id="topMenu">
+            <a href="../index.html">Home</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a class="active" href="./projects.html">Projects</a>
+            <a href="./photography.html">Photography</a>
+            <a href="./about.html">About me</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="aboutTextPortfolio">
+            <h1>Projects</h1>
+            <h2>Computer Graphics and Software Engineering</h2>
+            <p>Josefine Klintberg</p>
+        </div>
+    </header>
+
+    <div id="content">
+
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('graphics')"> Computer Graphics</button>
+            <button class="btn" onclick="filterSelection('game')"> Games</button>
+            <button class="btn" onclick="filterSelection('shader')"> Shaders</button>
+            <button class="btn" onclick="filterSelection('html')"> Web</button>
+            <button class="btn" onclick="filterSelection('coding')"> Coding</button>
+
+        </div>
+
+
+
+        <div id="portfolioItems">
+            <div class="allItems">
+
+                <div class="item shader graphics coding">
+                    <div class="name">
+                        <a href="./voronoi_shader.html">Voronoi - Fragment Shader in GLSL</a>
+                    </div>
+                    <a href="./voronoi_shader.html"><img src="../img/projects/voronoi.png" /></a>
+                </div>
+
+                <div class="item graphics">
+                    <div class="name">
+                        <a href="./3dmodelling.html">3D Modelling</a>
+                    </div>
+                    <a href="./3dmodelling.html"><img src="../img/projects/modelling.jpg" /></a>
+                </div>
+
+
+
+                <div class="item game coding">
+                    <div class="name">
+                        <a href="./the_missing_pages.html">The Missing Pages - A 2D platform game</a>
+                    </div>
+                    <a href="./the_missing_pages.html"><img src="../img/projects/fabula.jpg" /></a>
+                </div>
+
+                <div class="item shader graphics coding">
+                    <div class="name">
+                        <a href="./phongs.html">OpenGL and GLSL - Phong's light model</a>
+                    </div>
+                    <a href="./phongs.html"><img src="../img/projects/light2.png" /></a>
+                </div>
+
+                <div class="item game coding">
+                    <div class="name">
+                        <a href="./vegetable_rescue.html">Vegetable Rescue - Small 2D game</a>
+                    </div>
+                    <a href="./vegetable_rescue.html"><img src="../img/projects/vegetableRescue.jpg" /></a>
+                </div>
+
+
+                <!-- <div class="item vis coding">
+                    <div class="name">
+                        <a href="./audioviz.html">Audio Visualization</a>
+                    </div>
+                    <a href="./audioviz.html"><img src="../img/projects/audioviz.png" /></a>
+                </div> -->
+
+
+                <div class="item html coding">
+                    <div class="name">
+                        <a href="./lego.html">Website project - Statistics from a Lego Database</a>
+                    </div>
+                    <a href="./lego.html"><img src="../img/projects/lego.png" /></a>
+                </div>
+
+                <div class="item game coding">
+                    <div class="name">
+                        <a href="./iceracing.html">Ice Racing - Small 3D game</a>
+                    </div>
+                    <a href="./iceracing.html"><img src="../img/projects/iceracing.png" /></a>
+                </div>
+
+                <div class="item game coding">
+                    <div class="name">
+                        <a href="./minesweeper.html">Radioactive Minesweeper - Game</a>
+                    </div>
+                    <a href="./minesweeper.html"><img src="../img/projects/minesweeper.png" /></a>
+                </div>
+
+
+                <div class="item animation graphics">
+                    <div class="name">
+                        <a href="./supersnail.html">SuperSnail - A short animated movie</a>
+                    </div>
+                    <a href="./supersnail.html"><img src="../img/projects/supersnailSmall.jpg" /></a>
+                </div>
+
+
+
+
+
+
+                <div class="item coding">
+                    <div class="name">
+                        <a href="./autonomous_vehicle.html">The Autonomous Vehicle - BSc thesis</a>
+                    </div>
+                    <a href="./autonomous_vehicle.html"><img src="../img/projects/autonomousvehicle.png" /></a>
+                </div>
+
+                <div class="item Visualization coding matlab">
+                    <div class="name">
+                        <a href="./kepler.html">Visualization of Kepler trajectories using Matlab</a>
+                    </div>
+                    <a href="./kepler.html"><img src="../img/projects/kepler.png" /></a>
+                </div>
+
+                <div class="item visualization coding matlab">
+                    <div class="name">
+                        <a href="./carnumbergenerator.html">Carnumber Generator in Python</a>
+                    </div>
+                    <a href="./carnumbergenerator.html"><img src="../img/projects/carnumb.jpg" /></a>
+                </div>
+
+                <div class="item html coding">
+                    <div class="name">
+                        <a href="./svedangDesign.html">A Responsive Website for the B&ampB Svedängs Gård</a>
+                    </div>
+                    <a href="./svedangDesign.html"><img src="../img/projects/svedang.png" /></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/josefine-klintberg-744b40149/" target="_blank"><img
+                src="../img/logo/linkedin.png"></a>
+        <a href="https://github.com/jklintan" target="_blank"><img src="../img/logo/github.png"></a>
+        <a href="https://www.youtube.com/channel/UCMLbxzqNRCbDEJ7yqxcNPpQ/featured?view_as=subscriber"
+            target="_blank"><img src="../img/logo/youtube.png"></a>
+        <a href="mailto:josefine.klintberg@hotmail.com"><img src="../img/logo/mail.png"></a>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>

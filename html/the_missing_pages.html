@@ -1,0 +1,143 @@
+<!doctype html>
+
+<html class="portfolioPage" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>The Missing Pages</title>
+    <meta name="description" content="JosefineKlintberg">
+    <meta name="author" content="SitePoint">
+
+    <!-- Styles and fonts -->
+    <link rel="stylesheet" href="../style/style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="menu" id="topMenu">
+            <a href="../index.html">Home</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./photography.html">Photography</a>
+            <a href="./about.html">About me</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="aboutTextPortfolio">
+            <h1>The Missing Pages</h1>
+            <h2>Game Jam, 2 person group - Skyfox Game Jam 2019</h2>
+            <p>2D explorer game created in Unity</p>
+        </div>
+    </header>
+
+    <div id="content">
+        <img src="../img/portfolio/themissingpages.png" />
+        <div class="infoPortfolio">
+            <h1>Summary</h1>
+            <p class="cursive">This game was created during the Skyfox Game Jam in Norrköping 2019. Me and my friend
+                Embla decided to
+                create a 2D explorer game where the main character explores the world of books.</p>
+            <p>The plot is around the girl Fabula who lives in the world of books. She has a library and someone has
+                broken in and
+                stolen pages from different books. The players mission is to restore the library by travelling through
+                doors that
+                leads to fairytales and find the missing pages. Once a level is completed, that book is shown in Fabulas
+                library.
+            </p>
+            <p>The game was created using Unity and Embla was responsible for the graphics and I did the game design and
+                coding. </p>
+
+
+            <img src="../img/projects/theMissingPages.png" />
+
+            <h1>Technical Walkthrough</h1>
+
+            <p>We started out with brainstorming and deciding what we wanted to do during the game jam. One of the
+                themes suggested
+                was 'Little Worlds' and from this we got inspiration to use our favorite books for the game. We wanted a
+                "base" environment
+                from where the player can reach different levels and we decided to make the first level Narnia and that
+                got us into using
+                waredrobes as portals to the different worlds.
+            </p>
+
+            <div class="subfloat"><img src="../img/projects/worldOfBooks2.png" />
+                <img src="../img/projects/worldOfBooks3.png" /></div>
+
+            <p>The game starts out with a background explanation of the main character Fabula. For this section I coded
+                a dialogue manager that handles
+                the conversations. This script uses a queue of strings where the sentences is enqueued. Then each
+                character in the sentences is dequeued with
+                a small delay and this results in the slow appearance of the words.</p>
+
+            <img src="../img/projects/worldOfBooks.png" />
+
+            <p>The main character has a player controller script where I used a rigid body to control her motions.
+                Horizontal and vertical movement is
+                performed by adding vectors to the velocity. The character can also jump after firstly checking if the
+                character is grounded or not.
+                In this script I also handle the animations as well as finding the position of different game objects
+                (done by searching for the correct tag)
+                to enable the player to interact with characters and travel into different levels.
+            </p>
+
+            <img src="../img/projects/pages.png" />
+
+            <p>In the Narnia level, the player needs to find three lost pages. The pages have a script attached which
+                makes the count in the top corner add a point
+                for each collected page. In this level the plot states that the Ice Queen has placed out traps that the
+                player needs to conquer. This is enemy objects that
+                falls from the sky and if the player is hit, the player returns to the main level. The enemy objects is
+                spawned at different heights and places with randomly
+                selected vertical velocity (within a boundary).</p>
+
+            <img src="../img/projects/enemy.png" />
+
+            <p>When the level is completed the player returns to the main level again. If all the three missing pages
+                has been collected then this level is saved as
+                completed in a global variable and the book that represents this level appears in Fabulas library.
+            </p>
+
+            <img src="../img/projects/restoredBook.png" />
+
+            <p>During the Game Jam we only managed to complete one level but the portals to two others is in the game
+                and it can easily be expanded When
+                we got some time to spare. A fun weekend and we are proud of the work we accomplished during two days.
+            </p>
+
+
+            <p class="return">
+                <a href="./projects.html">Return to all projects</a>
+            </p>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/josefine-klintberg-744b40149/" target="_blank"><img
+                src="../img/logo/linkedin.png"></a>
+        <a href="https://github.com/jklintan" target="_blank"><img src="../img/logo/github.png"></a>
+        <a href="https://www.youtube.com/channel/UCMLbxzqNRCbDEJ7yqxcNPpQ/featured?view_as=subscriber"
+            target="_blank"><img src="../img/logo/youtube.png"></a>
+        <a href="mailto:josefine.klintberg@hotmail.com"><img src="../img/logo/mail.png"></a>
+    </footer>
+
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>

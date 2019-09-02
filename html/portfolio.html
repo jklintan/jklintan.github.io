@@ -1,0 +1,225 @@
+<!doctype html>
+
+<html class="portfolioPage" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Josefine Klintberg</title>
+    <meta name="description" content="JosefineKlintberg">
+    <meta name="author" content="SitePoint">
+
+    <!-- Styles and fonts -->
+    <link rel="stylesheet" href="../style/style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="menu" id="topMenu">
+            <a href="../index.html">Home</a>
+            <a class="active" href="./portfolio.html">Portfolio</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./photography.html">Photography</a>
+            <a href="./about.html">About me</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="aboutTextPortfolio">
+            <h1>Portfolio</h1>
+            <h2>Josefine Klintberg</h2>
+            <p>GAMES • VFX • ANIMATION</p>
+        </div>
+    </header>
+
+    <div id="content">
+
+        <div class="portfolioImage">
+            <div class="item5">
+                <p>SuperSnail</p>
+                <h2>Animated short movie</h2>
+            </div>
+        </div>
+
+        <div class="info">
+            <p class="cursive">SuperSnail is a short animated movie about a snail that suddenly gets superpowers and has
+                to deal with the consequences. The movie was created during the course Digital Media at Linköping
+                University and created using the 3D modelling software Blender.</p>
+            <p>SuperSnail was created as part of a course at Linköping University. The goal of the group was to create
+                an animated movie from scratch and deepen our knowledges in 3D modelling softwares. We
+                chose to use Blender since all group members had easy access to the software.
+            </p>
+            <p>My responsibilities in the project was partly story and storyboard. I created the snail in Blender,
+                including modelling, texturing, rigging and facial expressions. I animated some scenes. I created the
+                sound effects for the snail.
+            </p>
+            <div class="technical">Created: 2018 - Group Project: 4 people - Technologies: Blender, Premiere Pro</div>
+            <div class="moreLink">
+                <a href="https://www.youtube.com/watch?v=v5jBPfmD960" target="_blank">Watch Movie</a>
+                <a href="./supersnail.html">Read More</a>
+            </div>
+        </div>
+
+        <div class="portfolioImage">
+            <div class="item1">
+                <p>Procedural Voronoi Pattern</p>
+                <h2>Fragment shader in OpenGL and GLSL</h2>
+                <!--<br/><br/><br/><br/>
+                <a>Read more</a>-->
+            </div>
+        </div>
+
+        <div class="info">
+            <p class="cursive">With the combination of wanting to practice shader coding and watching the Khan Academy
+                "Pixar in a box" that talked about Voronoi Pattern I decided to create a fragment shader for this
+                purpose.</p>
+            <p>I started out with a simple scene in OpenGL with a single square. I used the vertex shader to send
+                positions and normals of the points on the square to the fragment shader. </p>
+            <p>The fragment shader implements the Voronoi pattern by placing a set number of seeds randomly over the
+                surface and then calculating the distances to the nearest seed for all other points.
+                The points that have the same distances to more than one seed is highlighted and creates the borders
+                around the cells. All points within one cell has the smallest distance to that particular seed than to
+                any other.
+            </p>
+            <p>The project was developed further by integrating Phongs local reflection model as well as using a sphere
+                instead of a square. </p>
+            <div class="technical">Created: 2019 - Personal project - Technologies: GLSL and OpenGL</div>
+            <div class="moreLink">
+                <a href="./voronoi_shader.html">Read More</a>
+                <a href="https://github.com/jklintan/shaders">Code</a>
+            </div>
+        </div>
+
+        <div class="portfolioImage">
+            <div class="item3">
+                <p>The Missing Pages</p>
+                <h2>A 2D platform game</h2>
+            </div>
+        </div>
+
+        <div class="info">
+            <p class="cursive">This game was created during the Skyfox Game Jam in Norrköping 2019. Me and my friend
+                Embla decided to
+                create a 2D platform game where the main character explores the world of books.</p>
+            <p>The plot is around the girl Fabula who lives in the world of books. She has a library and someone has
+                broken in and
+                stolen pages from different books. The players mission is to restore the library by travelling through
+                doors that
+                leads to fairytales and find the missing pages. Once a level is completed, that book is shown in Fabulas
+                library.
+            </p>
+            <p>The game was created using Unity and Embla was responsible for the graphics and I did the game design and
+                coding. </p>
+            <div class="technical">Created: 2019 - Group Project: 2 people - Technologies: Unity, C#</div>
+            <div class="moreLink">
+                <a href="./the_missing_pages.html">Read More</a>
+                <a href="https://github.com/jklintan/themissingpages">Code</a>
+                <a class="hideSmall" href="https://jklintan.github.io/TheMissingPages/">Demo</a>
+            </div>
+        </div>
+
+
+        <div class="portfolioImage">
+            <div class="item2">
+                <p>3D Modelling project</p>
+                <h2>Modelling, texturing and rendering in 3Ds Max</h2>
+            </div>
+        </div>
+
+        <div class="info">
+            <p class="cursive">This project was a modelling project where the group wanted to focus on texturing and
+                rendering
+                in a 3D modelling software. It was created as part of a course at Linköping University in 3D Computer
+                Graphics.</p>
+            <p>Our inspiration for this project was to create a scene that was somewhere between fantasy and reality
+                where
+                we could get a magical and low lightning environment where the light falls nicely on our models.
+            </p>
+            <p>My responsibilities in the project was modelling of an old armchair in the scene that had lots of small
+                details
+                and patterns. I spent a lot of time texturing the chair and I also helped with choices and inputs
+                regarding textures
+                in the whole scene.
+            </p>
+            <div class="technical">Created: 2019 - Group Project: 5 people - Technologies: 3Ds Max</div>
+            <div class="moreLink">
+                <a href="./3dmodelling.html">Read More</a>
+            </div>
+        </div>
+
+        <div class="portfolioImage">
+            <div class="item6">
+                <p>Phong's reflection model</p>
+                <h2>Local reflection model in OpenGL and GLSL</h2>
+            </div>
+        </div>
+
+        <div class="info">
+            <p class="cursive">A project in OpenGL with the purpose of learning how to implement models in OpenGL and
+                write shaders in GLSL. Parts of the project was performed as part of the
+                course Computer Graphics at Linköping University, which I developed further on my own.
+            </p>
+            <p>The main task for the project was to set up an OpenGL environment in Visual Studio and learn how to
+                define objects using triangles, how to send data to the vertex buffer and implement basic vertex and
+                fragment shaders. </p>
+            <p>The shader part of the lab assignment was to implement Phong's local reflection model which I continued
+                working on and comparing different values on reflection constants.
+            </p>
+            <div class="technical">Created: 2019 - Project: 1 person - Technologies: OpenGL and GLSL</div>
+            <div class="moreLink">
+                <a href="./phongs.html">Read More</a>
+                <a href="https://github.com/jklintan/OpenGL">Code</a>
+            </div>
+        </div>
+
+        <div class="portfolioImage">
+            <div class="item4">
+                <p>Radioactive Minesweeper</p>
+                <h2>My own implementation of the minesweeper game</h2>
+            </div>
+        </div>
+
+        <div class="info">
+            <p class="cursive">This is my own version of the traditional Minesweeper game. It was a personal project and
+                I implemented
+                it in Processing programming language. I wanted it to be a bit unique so it has the theme and appearance
+                of radioactive bombs and
+                the player needs to save the world from them.
+            </p>
+            <p>I was challenged by a friend to code a Minesweeper game where we both chose a different coding language
+                and implemented the game logic. I had a great time to explore how all the game rules and logic works in
+                the classic Minesweeper and to
+                figure out how I should implement it. Afterwards I spent some time to clean up the code and make it more
+                generalized.
+            </p>
+            <div class="technical">Created: 2018 - Personal project - Technologies: Processing</div>
+            <div class="moreLink">
+                <a href="./minesweeper.html">Read More</a>
+                <a href="https://github.com/jklintan/Minesweeper">Code</a>
+                <a class="hideSmall" href="https://jklintan.github.io/Minesweeper/">Demo</a>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/josefine-klintberg-744b40149/" target="_blank"><img
+                src="../img/logo/linkedin.png"></a>
+        <a href="https://github.com/jklintan" target="_blank"><img src="../img/logo/github.png"></a>
+        <a href="https://www.youtube.com/channel/UCMLbxzqNRCbDEJ7yqxcNPpQ/featured?view_as=subscriber"
+            target="_blank"><img src="../img/logo/youtube.png"></a>
+        <a href="mailto:josefine.klintberg@hotmail.com"><img src="../img/logo/mail.png"></a>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+
+<html class="portfolioPage" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Minesweeper</title>
+    <meta name="description" content="JosefineKlintberg">
+    <meta name="author" content="SitePoint">
+
+    <!-- Styles and fonts -->
+    <link rel="stylesheet" href="../style/style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="menu" id="topMenu">
+            <a href="../index.html">Home</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./photography.html">Photography</a>
+            <a href="./about.html">About me</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="aboutTextPortfolio">
+            <h1>Radioactive Minesweeper</h1>
+            <h2>Personal Project - Created autumn 2018</h2>
+            <p>Minesweeper game in Processing</p>
+        </div>
+    </header>
+
+    <div id="content">
+        <img src="../img/portfolio/minesweep.png" />
+        <div class="infoPortfolio">
+            <h1>Summary</h1>
+            <p class="cursive">This is my own version of the traditional Minesweeper game. It was a personal project and
+                I implemented
+                it in Processing programming language. I wanted it to be a bit unique so it has the theme and appearance
+                of radioactive bombs and
+                the player needs to save the world from them.
+            </p>
+            <p>I was challenged by a friend to code a Minesweeper game where we both chose a different coding language
+                and implemented the game logic. I had a great time to explore how all the game rules and logic works in
+                the classic Minesweeper and to
+                figure out how I should
+                implement it. Afterwards I spent some time to clean up the code and make it more generalized.
+            </p>
+
+            <div class="subfloat">
+                <img src="../img/projects/mine.png" />
+                <img src="../img/projects/mine2.png" />
+            </div>
+
+            <h1>Technical Walkthrough</h1>
+
+            <p>When starting this project it was essential to look into how the game logic for a Minesweeper game is
+                made. I researched a lot
+                and when implementing I followed the game logic walkthrough that CodeBuild has explained <a
+                    href="http://codebuild.blogspot.com/2015/01/algorithms-explained-minesweeper-game.html"
+                    target="_blank">here</a>.
+            </p>
+
+            <h2>Initialization</h2>
+            <p>The first thing I started with was to create the board. The board is represented by a 2D matrix of colors
+                where the color of each item
+                in the matrix is depending on the state of that particular "cell". The number of mines is a
+                predetermined number and I setup the board
+                by generating a random index for each mine and place the mine there (if no mine is placed there before)
+                and if a mine is placed I store true
+                in an array that represents the "bombstate" for all the cells.
+            </p>
+
+            <p>Each cell also needs to have a "count" on how many mines that particular cell is neighbour to. In the
+                initialization I go through
+                the whole board and for each cell it updates the count for each neighbouring cell. When this is done the
+                numbers are stored in an array and
+                the board is drawn. Another array is used to store if a cell is opened or not, in the beginning all is
+                closed.
+            </p>
+
+            <div class="subfloat">
+                <img src="../img/projects/mine3.png" />
+                <img src="../img/projects/minedev.png" />
+                Setting up of a grid with square cells. In early development I used grey colors and red to mark the
+                mines. Each cell contains info about mines, flagged, opened and number of neighbouring mines.
+            </div>
+
+            <h2>Game logic</h2>
+            <p>Each time that the player left clicks on a cell that cell is being marked as opened. If the cell contains
+                a mine, the player loses, otherwise
+                keep playing. If a cell is opened that has 0 mines as neighbours I use an auxiliary function that check
+                the surroundings around that cell, opens them up and check
+                for more zeros. It is recursive so if a neighbouring cell also are 0, that cells surroundings are opened
+                as well.
+            </p>
+
+            <p>When the player right clicks on a cell, that cell is being marked as flagged and the player believes that
+                it contains a mine. That cell is
+                still marked as closed but if the player later on left clicks on it, it will be opened. The player can't
+                close a cell once it is opened.
+            </p>
+
+            <p>If all cells that contains a mine has being marked as flagged and all the other cells has being marked as
+                opened, the player wins. </p>
+
+            <div class="subfloat">
+                <img src="../img/projects/mine1.png" />
+                <img src="../img/projects/mine.png" />
+                Adding of the function that opens up neighbouring cells if a mine has 0 neighbouring mines.
+            </div>
+
+            <p>This was a fun project that I learned a lot from, even though I would like to improve it further by
+                optimizing the
+                data structures used (only use 2D arrays to remove the convertion step with the index for example) and
+                to divide the
+                steps into more functions to keep the setup and draw functions more clean.
+            </p>
+
+
+
+            <p>My code for the project can be found on <a href="https://github.com/jklintan/Minesweeper"
+                    target="_blank">my Github</a>.</p>
+
+
+            <p class="return">
+                <a href="./projects.html">Return to all projects</a>
+            </p>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/josefine-klintberg-744b40149/" target="_blank"><img
+                src="../img/logo/linkedin.png"></a>
+        <a href="https://github.com/jklintan" target="_blank"><img src="../img/logo/github.png"></a>
+        <a href="https://www.youtube.com/channel/UCMLbxzqNRCbDEJ7yqxcNPpQ/featured?view_as=subscriber"
+            target="_blank"><img src="../img/logo/youtube.png"></a>
+        <a href="mailto:josefine.klintberg@hotmail.com"><img src="../img/logo/mail.png"></a>
+    </footer>
+
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>
