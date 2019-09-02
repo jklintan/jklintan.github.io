@@ -72,6 +72,24 @@ header{
     background-size: cover;
 }
 
+.return a{
+    border: 2px solid #000;
+    padding: 20px;
+    float: center;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+
+.return{
+    margin-top: 100px;
+    text-align: center !important;
+}
+
+.return a:hover{
+    color: #fff !important;
+    background-color: #000;
+}
+
 
 .portfolioPage header, .projectPage header, .photographyPage header{
     background: none;
@@ -137,6 +155,18 @@ header{
     margin: auto;
 }
 
+.infoPortfolio a{
+    color: #000;
+}
+
+.infoPortfolio a:hover{
+    color: rgba(0,0,0, 0.5);
+}
+
+.infoPortfolio h2{
+    font-family: 'Lora', serif;
+}
+
 #content p{
     font-family: 'Open Sans', serif;
     color: #000;
@@ -188,6 +218,12 @@ header{
 
 .moreLink a{
     margin: 0px 10px;
+}
+
+.moreLink img{
+    max-width: 10% !important;
+    float: center;
+    padding: 20px;
 }
 
 .moreLink a:hover{
@@ -246,13 +282,18 @@ header{
 }
 
 .portfolio a:hover, .about a:hover, .portfolioImage a:hover{
-    background-color: rgba(255, 255, 255, 0.7);
-    color: #000;
+    background-color: #000;
+    color: #fff;
 }
 
 
 
 /* Footer */
+
+.projectPage footer, .photographyPage footer{
+    margin-top: 50px;
+}
+
 footer{
     width: 100vw;
     background-color: #000;
@@ -367,6 +408,75 @@ iframe{
     width: 100%;
 }
 
+/*About page*/
+.aboutPage header{
+    /* background-image: url(../img/others/josefineAbout2.jpg); */
+    background-image: none;
+    height: 15vh;
+}
+
+.aboutPage #aboutText{
+    color: #000;
+}
+
+.aboutPage .about{
+    background-image: url(../img/others/josefineAbout.jpg);
+}
+
+.aboutPage .about a{
+    color: #fff;
+    margin: 10px;
+    border-color: #fff;
+}
+
+.aboutPage .info{
+    font-family: 'Open Sans', serif;
+}
+
+.aboutit{
+    text-align: left;
+    width: 100%;
+}
+
+.experience{
+    font-size: 13px;
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.where{
+    font-size: 14px;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.aboutit img{
+    max-width: 130px !important;
+    margin-bottom: 15px;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.ed img{
+    max-width: 60px !important;
+}
+
+.aboutit a{
+    border: none;
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+}
+
+
+h3{
+    margin-top: 40px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+}
 
 /* Responsive design */
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
@@ -402,6 +512,7 @@ iframe{
     .btn{
         display: none;
     }
+
 }
   
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
@@ -428,6 +539,25 @@ iframe{
 
     iframe{
         height: 250px;
+    }
+
+    
+    .portfolio a, .about a, .portfolioImage a{
+        float: center;
+        margin: auto;
+        padding: 30px;
+        border: 4px solid #fff;
+        color: #fff; 
+        text-transform: uppercase;
+    }
+
+    .portfolioImage a{
+        margin-top: 100px;
+    }
+
+    .portfolio a:hover, .about a:hover, .portfolioImage a:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #000;
     }
 }
 
@@ -529,6 +659,11 @@ iframe{
   .btn.active {
     background-color: #000;
     color: #fff;
+  }
+
+  .btn:visited{
+    background-color: #ddd;
+    color: #000;
   }
 
   .myBtnContainer{
