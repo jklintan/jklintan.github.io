@@ -1,0 +1,172 @@
+<!doctype html>
+
+<html class="portfolioPage" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Shades</title>
+    <meta name="description" content="JosefineKlintberg">
+    <meta name="author" content="SitePoint">
+
+    <!-- Styles and fonts -->
+    <link rel="stylesheet" href="../style/style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="menu" id="topMenu">
+            <a href="../index.html">Home</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./photography.html">Photography</a>
+            <a href="./about.html">About me</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="aboutTextPortfolio">
+            <h1>Shades</h1>
+            <h2>Individual project, 6 ECTS - Design of Computer Games</h2>
+            <p>3D RPG game created in Unity</p>
+        </div>
+    </header>
+
+    <div id="content">
+        <img src="../img/portfolio/Shades.png" />
+        <div class="infoPortfolio">
+            <h1>Summary</h1>
+            <p class="cursive">This game was created as part of the course 'Design of Computer Games' (TDDD23) at Linköping University during 
+                6 weeks in the fall of 2019. The aim of the project was to create a gaming prototype with focus on design details, communication, progression and 
+                skill level for the player. </p>
+            <p>Shades is a horrorthemed RPG game that evolves around an unnamed character in a dark, black and white world. The player has to lead the 
+                character forward with the hope of getting out of the shadows and on the way they encounter small colorful objects and characters. 
+                Core game mechanics is changing between 3D view and top-down view, click-and-point interaction and inventory handling, the player needs to collect items to use in different ways. 
+                While escaping from shadow creatures, getting lost in a maze, a forest and a cemetary, the player slowly unravels who they are and 
+                what has happened. 
+            </p>
+            <p>The game was created using Unity and all design has been implemented through Unity Asset Store for being able to fully focus on
+                game play and coding. It was an individual project and performed during the time period of 6 weeks (6 ECTS). A screencast/trailer 
+            can be found below: </p>
+
+
+                <iframe height="500px" src="https://www.youtube.com/embed/qgXPrsE5JnQ" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+            <h1>Game Mechanics</h1>
+
+            <p>
+                As mentioned above, core game mechanics consisted of changing between 3D view and top-down view, click-and-point interaction and inventory handling. Below I will briefly go through 
+                these three implementations. Other than this, a lot of coding was spent on creating an enemy shadow creature that hunts the player, conversation between characters and movement for the player. 
+            </p>
+
+            <img src="../img/projects/shades1.png" />
+
+            <h2>Interaction with objects</h2>
+            <p>I knew that I wanted the player to find out things of the plot by interacting with objects. For this I developed a script called interactionObject that I 
+                added to all the items that the player can interact with. To emphasize that these were interactable, they store the original color of the object and when the 
+                player hovers the mouse over the object, they both display the name of it and makes it lighter. When clicking on the object, a small menu is displayed that
+                the player can choose from and either find out more things or walk away. An additional function for this script was to add a 'destroyable' feature. If the 
+                object was marked as destroyable, then it can be destroyed with an axe that the player can find and add to their inventory. 
+            </p>
+
+            <img src="../img/projects/shades3.png" />
+
+            <h2>Inventory</h2>
+            <p>The inventory was a fun and interesting game mechanics to implement. I spent a lot of time to find different ways to make this work in the most efficient way. 
+                The code behind it was implemented with three classes, one representing an item, one an inventory and one database. The database stores all the possible items that
+                exists in the game in a list with an ID, description and image to each and one of them. The inventory keeps track of the items that the player currently has. 
+                By further connecting these classes to two similar classes, UI-item and UI-inventory, I connected the data to actually display the items on screen and with the 
+                possibility for the user to interact with the items in the inventory. I thought this was one of the most interesting things to work on and I would like to
+                develop it further with the possibility to combine items. 
+            </p>
+
+            <div class="subfloat">
+                    <img src="../img/projects/shades4.png" />
+                    <img src="../img/projects/shades5.png" />
+                </div>
+
+            <h2>Perspective changing</h2>
+            <p>The perspective changing mechanics was implemented as a way to force the player to think outside the box when solving different puzzles and problems in the game. 
+                The camera controlling was implemented so the view is clamped at one position but each time the player uses the scrollwheel, the view changes on the y-axis. 
+                This allows the player to choose a camera view that they think fit, but they will also be forced to use it in different situations. In some levels, a top-down-view is 
+                the only thing that allows the player to actually see all things in the scene, and in some levels, they need a regular third person view. 
+            </p>
+
+            <h1>Game Design</h1>
+
+            <p class="cursive">Who are you? Why is everything so dark? You wake up in darkness and without color, with only a small lamp to guide you through the world. By interacting with objects you start to unveil how to find your way out? But will you be able to change perspective enough to gather hope and keep fighting the shadows away?</p>
+
+            <h2>Plot</h2>
+            <p>Shades is a horrorthemed RPG game that evolves around an unnamed character in a dark, black and white world. The player has to lead the 
+                    character forward with the hope of getting out of the shadows and on the way they encounter small colorful objects and characters. 
+                    Core game mechanics is changing between 3D view and top-down view, click-and-point interaction and inventory handling, the player needs to collect items to use in different ways. 
+                    While escaping from shadow creatures, getting lost in a maze, a forest and a cemetary, the player slowly unravels who they are and 
+                    what has happened. 
+            </p>
+
+            <img src="../img/projects/shades.png" />
+
+                <h2>Gameplay</h2>
+            <p>The user needs to discover how to use the camera movement in order to change between a third person view and a top down view and by this solve puzzles. Store things you find in the inventory and always keep an eye out on your hope bar. Interaction with things in the world is essence in finishing the game, but do you even want to find out everything?</p>
+
+            <img src="../img/projects/shades4.png" />
+
+
+            <h2>Teaching feedback & visuals</h2>
+            <p>
+                    Feedback and teaching for the player is introduced in the beginning in a tutorial kind of area and here the player will get hints on how to play the game. It will also be impossible for the player to continue on if not learning how to play in this safe area in the beginning. 
+
+                    Some teaching feedback is introduced by audio when fighting enemies since when hunted by a shadow creature, a scary sound will start playing.  
+                    
+            </p>
+
+            <img src="../img/projects/shadesHelp.jpg" />
+
+            <h2>Progression</h2>
+
+            <p>Progression and variance in the game is partly introduced by going into more complex levels and by changing who the player can trust.
+                More and more dangers are introduced as the player moves on, the possibility that the player loses hope will be higher towards the end.  
+            </p>
+
+            <img src="../img/projects/shades2.png" />
+
+            <h2>Skill level</h2>
+            <p>The skill level in Shades are mostly built upon the users rotation of the camera. An experienced player will more likely see where and when it is most useful for a certain view. Experience regarding similar click-and-point games will also help because some objects need more interaction than others and sometimes you need to listen carefully to what the character says. 
+            </p>
+
+
+            <p class="return">
+                <a href="./projects.html">Return to all projects</a>
+            </p>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/josefine-klintberg-744b40149/" target="_blank"><img
+                src="../img/logo/linkedin.png"></a>
+        <a href="https://github.com/jklintan" target="_blank"><img src="../img/logo/github.png"></a>
+        <a href="https://www.youtube.com/channel/UCMLbxzqNRCbDEJ7yqxcNPpQ/featured?view_as=subscriber"
+            target="_blank"><img src="../img/logo/youtube.png"></a>
+        <a href="mailto:josefine.klintberg@hotmail.com"><img src="../img/logo/mail.png"></a>
+    </footer>
+
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>

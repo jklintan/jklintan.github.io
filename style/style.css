@@ -382,6 +382,23 @@ footer p{
     background-size: cover;
 }
 
+
+.item7{
+    background: url("../img/portfolio/minionHead2.png");
+    padding: 150px 0px;
+    background-position: center center;
+    background-attachment: fixed relative;
+    background-size: cover;
+}
+
+.item8{
+    background: url("../img/portfolio/shadesHead.png");
+    padding: 150px 0px;
+    background-position: center center;
+    background-attachment: fixed relative;
+    background-size: cover;
+}
+
 /* Link styling */
 a{
     font-weight: 700;
