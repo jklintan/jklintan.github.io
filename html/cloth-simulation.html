@@ -32,89 +32,102 @@
         </div>
 
         <div id="aboutTextPortfolio">
-            <h1>MatKOMA</h1>
-            <h2>University Project - Created autumn 2019</h2>
-            <p>Recipe Swiping App using React</p>
+            <h1>Cloth Simulation</h1>
+            <h2>University Project, 4 people - Created winter 2020</h2>
+            <p>Simulation of fabric using a mass-spring-system</p>
         </div>
     </header>
 
     <div id="content">
-        <img src="../img/projects/matkomafront.png" />
+        <img src="../img/projects/clothFront.png" />
         <div class="infoPortfolio">
             <h1>Summary</h1>
-            <p class="cursive">The application MatKOMA is a recipe swiping app with an environmental focus. The app starts with a menu where 
-                the user specifies which ingredients they have at home and want to use before they turn bad, if they have any dietary restrictions and 
-                how much time they have for cooking. The app then provides recipe matches for the user that can choose to either swipe up to get the recipe 
-                and instructions or swipe away the card for a new suggestion. 
+            <p class="cursive">This project was implemented as part of the course 'Modelling Project (TNM085)' at
+                Linköping University during 6 weeks 2020 by
+                a group of 4 people. The simulation is based on a model of a structural lattice with masses connected
+                using springs and dampers.
+                By formulating the forces acting on each particle, Euler's method and the Verlet method are used to
+                simulate the movement of the cloth in Matlab.
+                The cloth is further implemented in Processing with the use of Java and extended with user interaction,
+                UV-mapping for texturing and Perlin noise
+                for simulating wind acting on the cloth.
             </p>
 
-            <p>The application was implemented as a part of a course in communication and user interfaces at Linköping University and 
-                a lot of time was spent on creating prototypes and performing user testing, as well as analysing how to integrate Norman's 
-                design principles. 
+            <p>The model was first implemented in Matlab, both in a 2D plot and a 3D plot for checking that the physical
+                formulas were correct. The model was then
+                implemented in Processing and built as a stand-alone application. A third simulation was implemented
+                using Javascript in order to create a simple
+                web based tool for demonstration.
             </p>
 
-            <p>The project was developed using React, and the prototypes was created in Figma and Adobe XD. The project was performed as a group of
-                6 persons and I was part of the group that focused on design and prototypes but I also coded one of the React modules (button interaction). 
-            </p>
+            <iframe height="500px" src="https://www.youtube.com/embed/DsSu1jYIDHg" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
 
-            <!--<div class="info moreLink">
-                <a href="https://github.com/jklintan/shaders">Code</a>
-            </div>-->
-
-            <img width="100%" src="../img/projects/matkoma2.png" />
-
-            <h2>Prototype work in Figma</h2>
-            <p>After a first low-fi model on paper, we started working on a Figma prototype of the application. As can be seen, the first model was
-            quite simpel and we first had an idea of saving the recipes but then decided that we wanted a more linear search process and this was 
-            removed in the later models. </p>
-
-            <img src="../img/projects/prototype1.png" />
-
-            <p>The first user tests was performed and the prototype was remade in Figma again. I created a first version of a logotype and the application
-            had more focus on the matching page than before. </p>
-
-            <img src="../img/projects/prototype2.png" />
-
-            <p>After the second prototype, the group decided to switch to Adobe XD since we felt that Figma did not provide us with all the necessary features 
-            that we wanted to perform optimal user testing of the swiping function. </p>
-
-
-
-            <h2>Prototype in Adobe XD</h2>
-
-            <p> When switching prototype software, the group got the possibility to rethink the whole design and the new prototype was much simpler but clearer. A 
-            new logotype was created and except for the preference side, the swiping of recipes was the core. </p>
-
-            <img src="../img/projects/xd-1-overview.png" />
-
-            <p>The next prototype had much more details in the remake. Smoother shapes and a mapping to difficulty of recipe was introduced in the shape of chef hats. </p>
-
-            <img src="../img/projects/xd-2-overview.png" />
-
-            <p>With the second prototype in Adobe XD, the group found the application to be pretty close to what the group was aiming for. The next change was to 
-                further introduce some more environmental focus in the application that can be seen in the green color scheme and a carbon dioxide label on each recipe. 
-            </p>
-
-            <img src="../img/projects/xd-3-overview.png" />
-
-
-            <h2>Finalized application</h2>
-
-            <p>The finalized application was coded using React and was successfully created into a desktop and mobile adjusted application and the result can be seen below. 
-            </p>
-
-            <div class="subfloat">
-                <img src="../img/projects/1_preferenssida.png" />
-                <img src="../img/projects/2_matchsida.png" />
-                Preference page and matching page
+            <div class="info moreLink">
+                <a href="https://github.com/jklintan/Cloth-Simulation">Code</a>
+                <a href="https://jklintan.github.io/Cloth-Simulation/">Demo</a>
             </div>
 
-            <div class="subfloat">
-                <img src="../img/projects/3_receptsida.png" />
-                <img src="../img/projects/3_receptsida2.png" />
-                Recipe page 
-            </div>
-            
+
+            <h2>Implementation</h2>
+            <p>The mathematical model of the simulation is based on calculation of the motion of each particle in the
+                lattice.
+                In order to do this, Newton's second law of motion is used. The force on each particle will further
+                be the sum of the internal and external forces that act on the particle. The spring force is simulated
+                according to Hooks law and the damping according to the linear damping law.
+                External forces
+                include gravitational force, wind force and air resistance.
+            </p>
+
+            <img src="../img/projects/clothDemo.png" />
+
+            <p>The next step performed was to allow the user to interact with the cloth in various ways. A graphical
+                interface was implemented as a way to allow the user to use sliders in order to change the values of the
+                damping and spring constants and observe how the cloth responds to the change.
+                The values that the user can choose from are set within the simulation and offers a quite large range of
+                numbers. This means that the user could end up with a cloth that is experiencing unstable behaviour but
+                the choice to allow this is based on the purpose of understanding the connection between the constants.
+                A reset button is added as a way for the user to always being able to turn the cloth back into a stable
+                behavior. </p>
+
+
+
+            <p>In the beginning only two masses, the two in the top corners are set as fixed but the user should be able
+                to choose this during runtime. Therefor the mouse position of the user is tracked and when the user
+                presses the mouse button, the algorithm checks for a nearby mass and if the user has pressed on it, it
+                chooses this mass to follow the mouse button as long as the user press down the mouse button and drags.
+                By further pressing down the F-key when having a chosen mass, the user can fixate and unfixate masses.
+                This implementation successfully allows the user to investigate what happens to the cloth if it is only
+                attached in one point, or in multiple. </p>
+
+            <img src="../img/projects/interaction.PNG" />
+
+            <p>A way to create a cloth that has a more realistic appearance is to add a texture on top of it. In order
+                to achieve this, it is needed to create a UV-mapping of the lattice.
+                Even though triangles are the most used geometric primitive for generating graphics on a screen, there
+                exist some shapes that can be used for acceleration and simplicity. The approach used in this project is
+                based upon
+                quadrilateral strips, quad-strips, and definitions of vertices on every mass in the lattice.
+            </p>
+            <p>
+                A function is implemented for drawing the lattice that goes through every vertex in the lattice and
+                displays it on the current position. The usage of quad-strips as shape is defined before the loop and
+                then for every mass in the lattice, the positions of the mass and the corresponding UV-coordinates are
+                used for defining a vertex and its connection to the next vertex in the grid. In this way, a lattice
+                with base of quad-strips is built.
+                Since the UV-coordinates have been defined for each vertex, the built-in function texture can be used
+                for defining which input-image used for the rendering. This texture image will then be mapped upon the
+                defined vertex points that build up the lattice and will correctly deform along with the cloth. </p>
+
+            <img src="../img/projects/clothFrontpage.PNG" />
+
+            <p> In order to simulate wind, a map is used in order to create a force field. A small offset is added and
+                multiplied with Perlin Noise in order to get a continuous, but still slightly random, appearance of wind
+                interacting with the cloth. </p>
+
+            <img src="../img/projects/wind.PNG" />
+
             <p class="return">
                 <a href="./projects.html">Return to all projects</a>
             </p>
