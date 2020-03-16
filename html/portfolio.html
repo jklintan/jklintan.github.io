@@ -131,6 +131,37 @@
  
         </div>
 
+
+        
+        <div class="portfolioImage">
+            <div class="item1">
+                <p>Visualizing Women in Movies</p>
+                <h2>Highlighting gender biases within the film industry</h2>
+                <!--<br/><br/><br/><br/>
+                <a>Read more</a>-->
+            </div>
+        </div>
+
+        <div class="info">
+            <p class="cursive">This project was performed with purpose of creating an interactive solution that lets users gain insight in the Bechdel test and 
+                investigating connections between genres and female representation within the film industry. 
+                The project was performed as part of the course 'Information Visualization' (TNM048) at Linköping University during the winter of 2020. 
+            </p>
+            <p>The data for the project is consisting of two datasets, both acquired through Kaggle. One is a set of the 5000 most popular movies from the 
+                website IMDb between 1970 and 2013, and the other one is a dataset containing Bechdel data for around 2000 movies. The datasets are concatenated
+                and analysed through a Python script that outputs a json-file.</p>
+            <p>The visualization is implemented using Javascript d3 library and is based on a radial sequence approach where each movie is represented as a circle and displayed with a distance from the center that 
+                corresponds to the production year of the movie. The gross income for the movie is mapped through the radius of the circle and the user can filter movies 
+                according to Behdel data as well as display more detailed information of individual movies by hovering. 
+            </p>
+            <div class="technical">Created: 2020 - Group Project: 2 people - Technologies: Javascript, Python, HTML, CSS</div>
+            <div class="moreLink">
+                <a href="./visualizing-women-in-movies.html">Read More</a>
+                <a href="https://jklintan.github.io/Visualizing-Women-In-Movies/">Demo</a>
+                <a href="https://github.com/jklintan/Visualizing-Women-In-Movies">Code</a>
+            </div>
+        </div>
+
         <div class="portfolioImage">
                 <div class="item8">
                     <p>Shades</p>
@@ -158,40 +189,6 @@
                     <a href="https://www.youtube.com/watch?v=qgXPrsE5JnQ&t=1s" target="_blank">Trailer</a>
                 </div>
         </div>
-    
-
-        
-
-        <div class="portfolioImage">
-            <div class="item1">
-                <p>Procedural Voronoi Pattern</p>
-                <h2>Fragment shader in OpenGL and GLSL</h2>
-                <!--<br/><br/><br/><br/>
-                <a>Read more</a>-->
-            </div>
-        </div>
-
-        <div class="info">
-            <p class="cursive">With the combination of wanting to practice shader coding and watching the Khan Academy
-                "Pixar in a box" that talked about Voronoi Pattern I decided to create a fragment shader for this
-                purpose.</p>
-            <p>I started out with a simple scene in OpenGL with a single square. I used the vertex shader to send
-                positions and normals of the points on the square to the fragment shader. </p>
-            <p>The fragment shader implements the Voronoi pattern by placing a set number of seeds randomly over the
-                surface and then calculating the distances to the nearest seed for all other points.
-                The points that have the same distances to more than one seed is highlighted and creates the borders
-                around the cells. All points within one cell has the smallest distance to that particular seed than to
-                any other.
-            </p>
-            <p>The project was developed further by integrating Phongs local reflection model as well as using a sphere
-                instead of a square. </p>
-            <div class="technical">Created: 2019 - Personal project - Technologies: GLSL and OpenGL</div>
-            <div class="moreLink">
-                <a href="./voronoi_shader.html">Read More</a>
-                <a href="https://github.com/jklintan/shaders">Code</a>
-            </div>
-        </div>
-
 
         <div class="portfolioImage">
             <div class="item4">

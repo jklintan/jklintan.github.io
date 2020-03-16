@@ -1,0 +1,156 @@
+<!doctype html>
+
+<html class="portfolioPage" lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Visualizing Women in Movies</title>
+    <meta name="description" content="JosefineKlintberg">
+    <meta name="author" content="SitePoint">
+
+    <!-- Styles and fonts -->
+    <link rel="stylesheet" href="../style/style.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="menu" id="topMenu">
+            <a href="../index.html">Home</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./photography.html">Photography</a>
+            <a href="./about.html">About me</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="aboutTextPortfolio">
+            <h1>Visualizing Women in Movies</h1>
+            <h2>University Project - Created winter 2020</h2>
+            <p>Information Visualization - Highlighting gender biases within the film industry</p>
+        </div>
+    </header>
+
+    <div id="content">
+        <img src="../img/portfolio/womenViz.png" />
+        <div class="infoPortfolio">
+            <h1>Summary</h1>
+            <p class="cursive">This project was performed with purpose of creating an interactive solution that lets
+                users gain insight in the Bechdel test and
+                investigating connections between genres and female representation within the film industry.
+                The project was performed as part of the course 'Information Visualization' (TNM048) at Linköping
+                University during the winter of 2020.
+            </p>
+            <p>The data for the project is consisting of two datasets, both acquired through Kaggle. One is a set of the
+                5000 most popular movies from the
+                website IMDb between 1970 and 2013, and the other one is a dataset containing Bechdel data for around
+                2000 movies. The datasets are concatenated
+                and analysed through a Python script that outputs a json-file.</p>
+            <p>The visualization is implemented using Javascript d3 library and is based on a radial sequence approach
+                where each movie is represented as a circle and displayed with a distance from the center that
+                corresponds to the production year of the movie. The gross income for the movie is mapped through the
+                radius of the circle and the user can filter movies
+                according to Behdel data as well as display more detailed information of individual movies by hovering.
+            </p>
+            <div class="info moreLink">
+                <a href="./visualizing-women-in-movies.html">Read More</a>
+                <a href="https://jklintan.github.io/Visualizing-Women-In-Movies/">Demo</a>
+                <a href="https://github.com/jklintan/Visualizing-Women-In-Movies">Code</a>
+            </div>
+
+            <h2>About the visualization</h2>
+            <p>With an increased access and encountering with digital representation of characters in games, movies and
+                commercials, the importance of a diverse and including representation of gender is becoming more and
+                more important. In order of adding a direct measure and minimum criteria for a better female
+                representation in ﬁction, the Bechdel test canbeused. The test originated from the comic strip ”Dykes to
+                Watch Out For” by Alison Bechdel in 1986 and consist of three criterias; there must be at least two,
+                named, female characters, they must talk to each other and they must talk about something that is not a
+                man.
+            </p>
+
+            <p>
+                With main focus on the movie industry and how a gender asymmetric appearance and the lack of equal role
+                models is forming the way we think and form our minds around gender, this project was implemented with
+                the goal of investigating if there is certain movie genres that suffers more from gender biases than
+                others.</p>
+
+            <img width="100%" src="../img/projects/bechdel.PNG" />
+
+            <h2>Implementation</h2>
+
+            <p> Two data sources have been used for this project: <a
+                    href="https://www.kaggle.com/fivethirtyeight/fivethirtyeight-bechdel-dataset">the Bechdel
+                    Dataset</a> and <a href="https://www.kaggle.com/carolzhangdc/imdb-5000-movie-dataset">a subset of
+                    the Internet Movie Database (IMDb)</a>. Both of the datasets were acquired through <a
+                    href="https://www.kaggle.com/">Kaggle</a>.
+                In order to implement the visualization, the two datasets were processed and combined into one with
+                focus on dimensional reduction. A Python script was implemented that processed the data into a resulting
+                json-file and it was also used to output statistics of the data being processed in the console, as a way
+                to conclude that a good variety of data had been chosen. The statistics for the data used in the
+                visualization can be seen below.</p>
+
+            <img src="../img/projects/bechdelStats.PNG" />
+
+            <p>The implementation of the visualization graph was performed using the Javascript library \textit{d3},
+                version 3, and displayed through an HTML-file and styled by CSS. The usage of circles to represent the
+                years and the base for the Javascript implementation came from <a
+                    href="https://observablehq.com/@mksrivastava/d3-starburst-from-sunburst">the Starburst approach by
+                    Srivastava</a>. The main approach for designing and implementing the visualization was performed
+                with regards to the
+                'visualization seeking mantra' proposed by Shneiderman in 1996; overview first, zoom and filter, then
+                details on demand. </p>
+
+            <img src="../img/projects/bechdelFiltering.PNG" />
+            <img src="../img/projects/bechdelDetail.PNG" />
+
+            <p>Further more, user-centered evaluations was performed with the aim of concluding weather the
+                visualization had been implemented in a successful way that both allows for interaction as well as
+                investigations of correlations between genres and female representation in movies. The evaluation
+                consisted of six questions and was a mix of qualitative and quantitative measures that further was
+                resulting in a evaluation report and connected back to the implementation step in order to fix potential
+                issues.
+            </p>
+
+            <p>The user-centered evaluation confirmed that the visualization was a good application to encourage
+                interaction since all the participants managed to use and understand both the filtering and the mapping
+                of data within a short amount of time. However, there was one issue regarding the mapping that was
+                highlighted during the survey and that was the perception of which genre the movies corresponded to.
+                In order to further emphasize the mapping of data for the genres, an additional filtering function was
+                implemented that causes all movies corresponding to the current genre to be highlighted when the user
+                hovers over the name of that genre, or the line dividing this genre from the others.</p>
+
+            <img src="../img/projects/bechdelGenre.PNG" />
+
+            <p class="return">
+                <a href="./projects.html">Return to all projects</a>
+            </p>
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/josefine-klintberg-744b40149/" target="_blank"><img
+                src="../img/logo/linkedin.png"></a>
+        <a href="https://github.com/jklintan" target="_blank"><img src="../img/logo/github.png"></a>
+        <a href="https://www.youtube.com/channel/UCMLbxzqNRCbDEJ7yqxcNPpQ/featured?view_as=subscriber"
+            target="_blank"><img src="../img/logo/youtube.png"></a>
+        <a href="mailto:josefine.klintberg@hotmail.com"><img src="../img/logo/mail.png"></a>
+    </footer>
+
+
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>
