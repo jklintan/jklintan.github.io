@@ -19,7 +19,9 @@ body{
 }
 
 .projectPage .menu, .photographyPage .menu{
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
+    z-index: 10;
 }
 
 .singleImage{
@@ -558,12 +560,13 @@ h3{
   
 @media screen and (max-width: 600px) {
 
+
     .menu.responsive {
         position: fixed;
     }
 
     a.icon{
-        font-size: 10vw;
+        font-size: 10vw !important;
     }
 
     .menu.responsive a.icon {
@@ -578,7 +581,8 @@ h3{
         text-align: left;
     }
 
-    .menu{
+    .menu a{
+        font-size: 6vw;
     }
 
     iframe{
