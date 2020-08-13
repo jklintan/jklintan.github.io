@@ -559,11 +559,15 @@ h3{
 @media screen and (max-width: 600px) {
 
     .menu.responsive {
-        position: relative;
+        position: fixed;
+    }
+
+    a.icon{
+        font-size: 10vw;
     }
 
     .menu.responsive a.icon {
-      position: absolute;
+      position: fixed;
       right: 0;
       top: 0;
     }
