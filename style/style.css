@@ -42,7 +42,7 @@ body{
     text-align: center;
     padding: 38px 15px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
 }
   
@@ -65,7 +65,7 @@ body{
 /* Header and intro */
 header{
     max-width: 100vw;
-    background: url("../img/others/frontPortfolio.jpg");
+    background: url("../img/others/frontPortfolio2.jpg");
     height: 110vh;
     text-align: center;
     background-position: center center;
@@ -122,25 +122,28 @@ header{
 }
 
 #aboutText h1, #aboutTextPortfolio h1{
-    font-size: 65px;
+    font-size: 3rem;
     font-family: 'Open Sans', serif;
     text-transform: uppercase;
     margin-bottom: -5px;
 }
 
 #aboutText p, #aboutTextPortfolio p{
-    font-size: 25px;
+    font-size: 1rem;
     font-family: 'Open Sans', serif;
 }
 
 #aboutText h2, #aboutTextPortfolio h2{
     width: 80%;
     margin: auto;
-    font-size: 15px;
+    font-size: 1.5rem;
     margin-top: -5px;
     font-family: 'Open Sans', serif;
 }
 
+.smallScreenHide{
+    visibility: visible;
+}
 
 
 /* Content */
@@ -252,7 +255,7 @@ header{
 }
 
 .about{
-    background: url("../img/others/josefineAbout2.jpg");
+    background: url("../img/others/josefineAbout.jpg");
     padding: 250px 0px;
     text-align: center;
     background-position: center center;
@@ -272,9 +275,9 @@ header{
 .portfolio a, .about a, .portfolioImage a{
     float: center;
     margin: auto;
-    padding: 30px;
-    border: 4px solid #000;
-    color: #000; 
+    padding: 40px 70px;
+    border: 4px solid #fff;
+    color: #fff; 
     text-transform: uppercase;
 }
 
@@ -283,8 +286,8 @@ header{
 }
 
 .portfolio a:hover, .about a:hover, .portfolioImage a:hover{
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
 }
 
 
@@ -376,7 +379,7 @@ footer p{
 }
 
 .item6{
-    background: url("../img/portfolio/waterShader.png");
+    background: url("../img/others/about.png");
     padding: 150px 0px;
     background-position: center center;
     background-attachment: fixed relative;
@@ -499,6 +502,9 @@ h3{
 /* Responsive design */
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
+
+
+
     .menu a {
         display: none;
     }
@@ -515,6 +521,7 @@ h3{
 }
 
 @media screen and (max-width: 1100px){
+
     .info{
         width: 80vw;
     }
@@ -528,12 +535,13 @@ h3{
     }
 
     .singleImage{
-        max-width: 900px;
+        max-width: 100vw;
     }
 
-}
+    .smallScreenHide{
+        display: none !important;
+    }
 
-@media screen and (max-width: 800px){
     .btn{
         display: none;
     }
@@ -542,13 +550,12 @@ h3{
         max-width: 800px;
     }
 
-    .singleImage{
-        max-width: 800px;
+    footer{
+        display: none;
     }
 
 }
   
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
 
     .menu.responsive {
@@ -594,12 +601,18 @@ h3{
     }
 
     .photographyPage #portfolioItems, .photographyPage .portfolioItems{
-        max-width: 550px;
+        max-width: 80vw;
+        float: center;
     }
 
     .singleImage{
-        max-width: 550px;
+        max-width: 80vw;
     }
+
+    .portfolioPage{
+        overflow-x: hidden !important;
+    }
+
 }
 
 #portfolioItems{
