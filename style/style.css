@@ -261,7 +261,7 @@ header{
 }
 
 .about{
-    background: url("../img/others/josefineAbout.jpg");
+    background: url("../img/others/josefineAbout3.jpg");
     padding: 250px 0px;
     text-align: center;
     background-position: center center;
@@ -447,7 +447,7 @@ iframe{
 }
 
 .aboutPage .about{
-    background-image: url(../img/others/josefineAbout.jpg);
+    background-image: url(../img/others/josefineAbout3.jpg);
 }
 
 .aboutPage .about a{
@@ -463,6 +463,17 @@ iframe{
 .aboutit{
     text-align: left;
     width: 100%;
+}
+
+.aboutPage .linkInText{
+    border: none;
+    text-decoration: none;
+    padding: 0;
+    text-transform: none;
+}
+
+.aboutPage .linkInText:hover {
+    color: #999;
 }
 
 .experience{
