@@ -42,7 +42,7 @@ body{
     display: block;
     color: #000;
     text-align: center;
-    padding: 38px 15px;
+    padding: 25px 15px;
     text-decoration: none;
     font-size: 16px;
     text-transform: uppercase;
@@ -91,6 +91,10 @@ header{
 .return a:hover{
     color: #fff !important;
     background-color: #000;
+}
+
+.doubleMargin{
+    margin-bottom: 150px !important;
 }
 
 
@@ -566,7 +570,11 @@ h3{
     }
 
     a.icon{
-        font-size: 10vw !important;
+        font-size: 6vw !important;
+    }
+
+    .icon{
+        border: none !important;
     }
 
     .menu.responsive a.icon {
@@ -583,6 +591,11 @@ h3{
 
     .menu a{
         font-size: 6vw;
+        border-top: 1px solid #ccc;
+    }
+
+    .menu{
+        border-bottom: 1px solid #ccc;
     }
 
     iframe{
