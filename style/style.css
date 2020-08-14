@@ -12,6 +12,7 @@ body{
     background-color: #fff;
     position: fixed;
     width: 100vw;
+    border-bottom: 1px solid #ccc;
 }
 
 .menu img {
