@@ -88,9 +88,16 @@
             <p class="cursive">This is a summary of my work during the labs in the course Modelling and Animation at Linköping University during the spring of 2020.
                 The course consisted of 6 labs covering topics within computer graphics implemented in C++ and OpenGL.
             </p>
-            <p>The content of the course was the half-edge mesh data structure, decimation using the quadric error metric, subdivision using
-                the cubic B-spline, implicit surfaces, level sets and fluid simulation based on the Navier-Stokes equations. The labs was 
-                conducted in collaboration with Linus Mossberg. 
+            <p>The content of the course was the half-edge mesh data structure and how curvature could be implemented using different numerical methods and investigate their 
+                influence on performance and correctness. Followed was the implementation of decimation of a mesh using the quadric error metric that allowed for multiple 
+                analyses of the correctness of newly places vertices when collapsing a specific vertex and the cost of decimating. After we had explored how a decimating process 
+                could be implemented, the next focus was on making the mesh more detailed and with the use of the cubic B-spline, a subdivision algorithm was implemented. With this, 
+                an additional subdivision method of our own choice was created and we used frustum culling and the position of the camera for our subdivision.</p>
+                
+            <p>Since there exists moments when the half-edge mesh representation (and explicit methods to be specific) is optimal, we moved on to the representation of surfaces 
+                using implicit equations and the level set method. With the use of boolean operators and super elliptic blending, we could combine simple primitives into larger 
+                level sets, but still being able to represent them in an easy way. Additional tasks such as curvature and morphing was implemented in this stage as well. The final 
+                lab was focused on creating a simulation based on the Navier-Stokes equations in order to simulate fluid. All the labs was conducted in collaboration with Linus Mossberg. 
             </p>
             <div class="technical">Created: 2020 - University Project, 2 people - Technologies: C++, OpenGL</div>
             <div class="moreLink">
@@ -244,8 +251,6 @@
         <a href="https://www.linkedin.com/in/josefine-klintberg-744b40149/" target="_blank"><img
                 src="../img/logo/linkedin.png"></a>
         <a href="https://github.com/jklintan" target="_blank"><img src="../img/logo/github.png"></a>
-        <a href="https://www.youtube.com/channel/UCMLbxzqNRCbDEJ7yqxcNPpQ/featured?view_as=subscriber"
-            target="_blank"><img src="../img/logo/youtube.png"></a>
         <a href="mailto:josefine.klintberg@hotmail.com"><img src="../img/logo/mail.png"></a>
     </footer>
 

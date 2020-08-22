@@ -32,6 +32,10 @@ body{
     margin-top: 15px;
 }
 
+ul{
+    font-family: 'Open Sans', serif;
+}
+
 .singleImage:hover{
     opacity: 0.6;
     filter: alpha(opacity=60);
@@ -214,6 +218,13 @@ header{
     border: 2px solid #000;
     color: #000; 
     text-transform: uppercase;
+}
+
+.subim{
+    font-size: 80%;
+    float: center;
+    text-align: center !important;
+    margin-top: 2px;
 }
 
 .moreLink{
