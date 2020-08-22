@@ -1,7 +1,7 @@
 
 body{
     margin: 0;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 
@@ -314,9 +314,10 @@ footer{
 
 footer img{
     margin: 0;
-    padding: 0px 20px;
-    width: 50px;
+    padding: 0px 50px;
+    width: 80px;
 }
+
 
 footer p{
     float: center;
@@ -504,7 +505,7 @@ iframe{
 
 .aboutit a{
     border: none;
-    float: left;
+    font-weight: normal;
     width: 100%;
     text-align: left;
     padding: 0;
@@ -568,13 +569,14 @@ h3{
         max-width: 800px;
     }
 
-    footer{
-        display: none;
-    }
-
 }
   
 @media screen and (max-width: 600px) {
+
+    footer img {
+        width: 15vw;
+        padding: 0 20px;
+    }
 
 
     .menu.responsive {
