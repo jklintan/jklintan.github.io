@@ -473,9 +473,31 @@ iframe{
     font-family: 'Open Sans', serif;
 }
 
+.aboutit_wrapper{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
 .aboutit{
     text-align: left;
     width: 100%;
+}
+
+.aboutittext{
+    text-align: left;
+    width: 80%;
+    float: right;
+}
+
+.aboutitimage{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+
+.aboutitimage a{
+    border: none;
 }
 
 .aboutPage .linkInText{
