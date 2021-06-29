@@ -475,7 +475,7 @@ iframe{
 
 .aboutit_wrapper{
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .aboutit{
@@ -486,18 +486,19 @@ iframe{
 .aboutittext{
     text-align: left;
     width: 80%;
-    float: right;
 }
 
 .aboutitimage{
-    width: 20%;
     height: 100%;
     float: left;
+    width: 20%;
+    padding-bottom: 50px;
 }
 
 
 .aboutitimage a{
     border: none;
+    padding: 0;
 }
 
 .aboutPage .linkInText{
@@ -513,10 +514,21 @@ iframe{
 
 .experience{
     font-size: 13px;
-    width: 100%;
     text-align: justify;
     margin-bottom: 20px;
     margin-top: 10px;
+}
+
+.expdiv{
+    width: 100%;
+    height: 4em;
+}
+
+.exp-text{
+    width: 80%;
+    float: right;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .where{
@@ -563,7 +575,15 @@ h3{
         display: none;
     }
 
+    .aboutit_wrapper{
+        margin-bottom: 30px;
+    }
+
     .aboutittext{
+        width: 100%;
+    }
+
+    .experience{
         width: 100%;
     }
 
