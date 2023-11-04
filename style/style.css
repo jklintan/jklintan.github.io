@@ -2,14 +2,15 @@
 body{
     margin: 0;
     overflow-x: hidden !important;
+    max-width: 100% !important;
 }
 
 
 /* Menu */
 .menu {
-    font-family: 'Open Sans', serif;
+    font-family: 'Edu NSW ACT Foundation', cursive;
     overflow: hidden;
-    background-color: #c6d9bd56;
+    background-color: #c6d9bda0;
     position: fixed;
     width: 100vw;
     border-bottom: 1px solid #ddd;
@@ -43,31 +44,37 @@ ul{
   
 /* Style the links inside the navigation bar */
 .menu a {
+    font-family: 'Edu NSW ACT Foundation', cursive;
     float: left;
     display: block;
-    color: #000;
+    color: rgb(93, 93, 93);
     text-align: center;
-    padding: 25px 15px;
+    padding: 25px 30px 25px 0px;
     text-decoration: none;
     font-size: 16px;
     text-transform: uppercase;
+    font-weight: 100;
 }
   
 /* Change the color of links on hover */
-.menu a:hover {
-    color: rgb(60, 66, 63);
+.hover-links:hover {
+    color: #dddbd1;
 }
   
 /* Add an active class to highlight the current page */
 .menu a.active {
-    color: rgb(139, 139, 139);
-    text-decoration: underline 2px;
-    text-underline-offset: 5px;
+    color: rgb(116, 116, 116);
 }
   
 /* Hide the link that should open and close the topnav on small screens */
 .menu .icon {
     display: none;
+}
+
+.wrap-text{
+    word-wrap: break-word;      /* IE 5.5-7 */
+    white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
+    white-space: pre-wrap;      /* current browsers */
 }
 
 
@@ -98,6 +105,33 @@ header{
 .return a:hover{
     color: #fff !important;
     background-color: #000;
+}
+
+.name-header{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-weight: 100;
+    flex: 1;
+    text-align: left !important;
+    white-space: pre;
+}
+
+.menu-items .name-header a:hover{
+    color: rgb(93, 93, 93) !important;
+}
+
+.menu-items{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.menu-items::after {
+    flex: 1;
+    content: '';
+  }
+
+.menu-items a{
+    justify-self: center;
 }
 
 .doubleMargin{
@@ -574,7 +608,18 @@ h3{
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
 
+    .name-header{
+        display: none !important;
+    }
 
+    .menu-items{
+        display: inline-block;
+        width: 100vw;
+    }
+
+    .menu-items a{
+        padding-left: 10px;
+    }
 
     .menu a {
         display: none;
@@ -585,6 +630,10 @@ h3{
       display: block;
     }
 
+    #content{
+        margin-top: 30px;
+    }
+
     .hideSmall{
         display: none;
     }
@@ -592,6 +641,22 @@ h3{
 }
 
 @media screen and (max-width: 1100px){
+    .name-header{
+        display: none !important;
+    }
+
+    .menu-items{
+        display: inline-block;
+        width: 100vw;
+    }
+
+    .menu-items a{
+        padding-left: 10px;
+    }
+
+    #content{
+        margin-top: 30px;
+    }
 
     .info{
         width: 80vw;
@@ -624,6 +689,22 @@ h3{
 }
   
 @media screen and (max-width: 600px) {
+    .name-header{
+        display: none !important;
+    }
+
+    .menu-items{
+        display: inline-block;
+        width: 100vw;
+    }
+
+    .menu-items a{
+        padding-left: 10px;
+    }
+
+    #content{
+        margin-top: 30px;
+    }
 
     footer img {
         width: 15vw;
