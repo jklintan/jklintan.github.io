@@ -1,11 +1,18 @@
 
 /* Top menu icon toggler */
-function myFunction() {
+function toggleMenu() {
     var x = document.getElementById("topMenu");
     if (x.className === "menu") {
       x.className += " responsive";
     } else {
       x.className = "menu";
+    }
+
+    var y = document.getElementById("menu-hidden");
+    if (y.style.display === "block") {
+      y.style.display = "none";
+    } else {
+      y.style.display = "block";
     }
 }
 
