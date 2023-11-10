@@ -260,6 +260,11 @@ header{
 
 #content img{
     max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #content h1{
